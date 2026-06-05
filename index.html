@@ -9,30 +9,25 @@
 <meta name="apple-mobile-web-app-title" content="Greentouch Go">
 <meta name="description" content="Office Cab Service · Smart City, Kakkanad">
 <title>Greentouch Go</title>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 /* ── LEAFLET INLINE ── */
-.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none!important;max-height:none!important}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{touch-action:pinch-zoom}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform;transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:grab}.leaflet-popup-pane,.leaflet-control{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive{cursor:grabbing}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive{pointer-events:auto}.leaflet-container{background:#ddd;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-container .leaflet-control-attribution{background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution{padding:0 5px;color:#333;line-height:1.4}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;transform:rotate(45deg)}.leaflet-popup-content{margin:13px 24px;line-height:1.3;word-break:break-word}.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;background:transparent;cursor:pointer}.leaflet-div-icon{background:#fff;border:1px solid #666}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none!important;max-height:none!important}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{touch-action:pinch-zoom}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform;transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:grab}.leaflet-popup-pane,.leaflet-control{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive{cursor:grabbing}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive{pointer-events:auto}.leaflet-container{background:#ddd;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-container .leaflet-control-attribution{background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution{padding:0 5px;color:#333}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;transform:rotate(45deg)}.leaflet-popup-content{margin:13px 24px;line-height:1.3;word-break:break-word}.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;background:transparent;cursor:pointer}.leaflet-div-icon{background:#fff;border:1px solid #666}
 /* ── APP ── */
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100vh}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0fdf4}
 :root{--p:#15803d;--pl:#22c55e;--p2:#166534;--g:#16a34a;--w:#d97706;--r:#dc2626;--dk:#14532d;--gr:#4b7a5a}
-/* Install Banner */
 .install-banner{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#14532d,#15803d);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px;z-index:9999;box-shadow:0 -4px 20px rgba(0,0,0,.2);transform:translateY(100%);transition:transform .3s}
 .install-banner.show{transform:translateY(0)}
 .ib-icon{font-size:26px;flex-shrink:0}.ib-text{flex:1;font-size:13px}.ib-title{font-weight:800;margin-bottom:2px}.ib-sub{opacity:.8;font-size:11px}.ib-btns{display:flex;gap:8px;flex-shrink:0}
 .ib-install{background:#fff;color:#15803d;border:none;padding:7px 13px;border-radius:8px;font-weight:800;font-size:12px;cursor:pointer}
 .ib-dismiss{background:rgba(255,255,255,.2);color:#fff;border:none;padding:7px 10px;border-radius:8px;font-size:12px;cursor:pointer}
-/* Config error */
 .cfg-err{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#14532d,#16a34a);padding:20px}
 .cfg-card{background:#fff;border-radius:18px;padding:28px;max-width:440px;width:100%;box-shadow:0 20px 40px rgba(0,0,0,.2)}
 .cfg-card h2{color:#dc2626;margin-bottom:10px;font-size:18px}
 .cfg-card p{font-size:13px;color:#374151;margin-bottom:12px;line-height:1.6}
 .cfg-card code{background:#f3f4f6;padding:2px 7px;border-radius:4px;font-size:12px;color:#dc2626}
-/* Screens */
 .ls{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#14532d 0%,#15803d 50%,#16a34a 100%);padding:20px 16px}
 .l-logo-wrap{width:80px;height:80px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:10px;box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .l-title{color:#fff;font-size:27px;font-weight:900;margin-bottom:3px;letter-spacing:-.5px}
@@ -81,7 +76,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0fdf4}
 .badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:800}
 .bg2{background:#dcfce7;color:#15803d}.br2{background:#fee2e2;color:#dc2626}.by{background:#fef9c3;color:#b45309}.bb{background:#d1fae5;color:#15803d}
 .nc{background:#fff;border-radius:11px;padding:12px;margin-bottom:8px;border-left:4px solid var(--p);box-shadow:0 1px 5px rgba(0,0,0,.06);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.nc.park{border-left-color:#d97706}.nc.off2{border-left-color:#15803d}.nc.acc{border-left-color:#7c3aed}.nc.pend{border-left-color:#f59e0b}
+.nc.park{border-left-color:#d97706}.nc.off2{border-left-color:#15803d}.nc.acc{border-left-color:#7c3aed}
 .nn{font-weight:700;color:var(--dk);font-size:13px}.nd{font-size:11px;color:var(--gr);margin-top:2px}
 .na{display:flex;gap:5px;flex-shrink:0}
 .dc{display:flex;align-items:center;gap:11px;background:#fff;border-radius:11px;padding:11px 14px;margin-bottom:8px;box-shadow:0 1px 5px rgba(0,0,0,.06)}
@@ -148,80 +143,81 @@ tr:hover td{background:#f0fdf4}
     <button class="ib-dismiss" onclick="dismissInstall()">✕</button>
   </div>
 </div>
-<script>
-// ╔══════════════════════════════════════════════╗
-// ║   PASTE YOUR FIREBASE CONFIG HERE            ║
-// ╚══════════════════════════════════════════════╝
-const FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-// ══════════════════════════════════════════════
 
-// ── FIREBASE + STORAGE ────────────────────────
+<!-- Firebase v12 modular SDK -->
+<script type="module">
+import { initializeApp }                              from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import { getDatabase, ref as R, get, set, remove, onValue }
+                                                      from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+// ── FIREBASE CONFIG ───────────────────────
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyCcCDcoAQi2vf0SPVUU283mwLN6vHbBHwY",
+  authDomain: "greentouch-go.firebaseapp.com",
+  databaseURL: "https://greentouch-go-default-rtdb.firebaseio.com",
+  projectId: "greentouch-go",
+  storageBucket: "greentouch-go.firebasestorage.app",
+  messagingSenderId: "54837107303",
+  appId: "1:54837107303:web:bc36efc222ad22696092c2",
+  measurementId: "G-4FP48EHRDV"
+};
+
+// ── FIREBASE STORAGE ──────────────────────
 let _db = null;
 const PFX = 'gtgo/';
 
 function initFirebase() {
-  if (FIREBASE_CONFIG.apiKey === 'YOUR_API_KEY') {
-    document.getElementById('app').innerHTML = `
-    <div class="cfg-err"><div class="cfg-card">
-      <h2>⚠️ Firebase Not Configured</h2>
-      <p>Open <code>index.html</code> and replace <code>FIREBASE_CONFIG</code> with your Firebase project credentials.</p>
-      <p><b>Steps:</b><br>
-      1. Go to <b>console.firebase.google.com</b><br>
-      2. Open your project → ⚙️ Project Settings<br>
-      3. Scroll to "Your apps" → copy the config<br>
-      4. Paste it into this file replacing the placeholder</p>
-      <p style="color:#6b7280;font-size:12px">Also make sure Realtime Database is enabled in <b>Build → Realtime Database</b> with rules set to test mode.</p>
-    </div></div>`;
-    return false;
-  }
   try {
-    firebase.initializeApp(FIREBASE_CONFIG);
-    _db = firebase.database();
+    const app = initializeApp(FIREBASE_CONFIG);
+    _db = getDatabase(app);
     return true;
   } catch(e) {
-    console.error('Firebase:', e);
+    document.getElementById('app').innerHTML = `
+    <div class="cfg-err"><div class="cfg-card">
+      <h2>⚠️ Firebase Error</h2>
+      <p>${e.message}</p>
+      <p>Make sure your Realtime Database rules are set to allow read/write in test mode.</p>
+    </div></div>`;
     return false;
   }
 }
 
-// Firebase for shared data (synced across all devices)
+// Convert Firebase object-stored arrays back to JS arrays
+function toArr(val) {
+  if (!val) return [];
+  if (Array.isArray(val)) return val;
+  if (typeof val === 'object') return Object.values(val);
+  return [];
+}
+
 async function sGet(k) {
   if (!_db) return null;
   try {
-    const snap = await _db.ref(PFX + k).get();
+    const snap = await get(R(_db, PFX + k));
     if (!snap.exists()) return null;
     const val = snap.val();
-    // Firebase stores arrays as objects — convert back
     if (val && typeof val === 'object' && !Array.isArray(val)) {
       const keys = Object.keys(val);
-      if (keys.length && keys.every(k => !isNaN(parseInt(k)))) return Object.values(val);
+      if (keys.length && keys.every(ki => !isNaN(parseInt(ki)))) return Object.values(val);
     }
     return val;
   } catch(e) { return null; }
 }
 async function sSet(k, v) {
   if (!_db) return;
-  try { await _db.ref(PFX + k).set(v); } catch(e) { console.error('sSet:', e); }
+  try { await set(R(_db, PFX + k), v); } catch(e) { console.error('sSet:', k, e); }
 }
 async function sDel(k) {
   if (!_db) return;
-  try { await _db.ref(PFX + k).remove(); } catch(e) {}
+  try { await remove(R(_db, PFX + k)); } catch(e) {}
 }
 
-// localStorage for sessions (device-specific — keeps you logged in)
-function sessGet(k) { try { return JSON.parse(localStorage.getItem(k)); } catch(e) { return null; } }
-function sessSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
-function sessDel(k) { try { localStorage.removeItem(k); } catch(e) {} }
+// localStorage for session (device-specific — keeps you logged in)
+const sessGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch(e) { return null; } };
+const sessSet = (k,v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} };
+const sessDel = k => { try { localStorage.removeItem(k); } catch(e) {} };
 
-// ── DEFAULTS ──────────────────────────────────
+// ── DEFAULTS ──────────────────────────────
 const DEF_COS = ['TechCorp Solutions','InfoSys India','DataWave Analytics','CloudNine Ltd','NexGen Systems'];
 const DEF_USERS = [
   {id:'user01',pwd:'pass123',name:'Arjun Nair',co:'TechCorp Solutions',mob:'9876543210',status:'active'},
@@ -233,7 +229,7 @@ const DEF_DRVS = [
   {id:'drv03',pwd:'drv123',name:'Pradeep Menon',veh:'KL-07-EF-9012',online:false,st:'offline',lat:10.0071,lng:76.3656,trips:15},
 ];
 
-// ── STATE ─────────────────────────────────────
+// ── STATE ─────────────────────────────────
 const ST = {
   view:'loading', role:'user',
   users:[], drivers:[], companies:[],
@@ -247,145 +243,89 @@ const PARK = {lat:10.003944, lng:76.361403};
 const OFFC = {lat:10.0099029, lng:76.3679895};
 let MAP = null, installEvt = null, renderTimer = null;
 
-function ts() { return new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'}); }
-function uid() { return 'x'+Date.now()+Math.floor(Math.random()*999); }
-function v(id) { return (document.getElementById(id)?.value||'').trim(); }
+const ts  = () => new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+const uid = () => 'x'+Date.now()+Math.floor(Math.random()*999);
+const v   = id => (document.getElementById(id)?.value||'').trim();
 
-// ── REALTIME LISTENERS ────────────────────────
+// ── REALTIME LISTENERS ────────────────────
 function setupRealtime() {
   if (!_db) return;
-  // Notifications — live sync between user, driver and admin
-  _db.ref(PFX+'gtgo_notifs').on('value', snap => {
-    let d = snap.val();
-    if (d && typeof d === 'object' && !Array.isArray(d)) d = Object.values(d);
-    d = d || [];
-    if (JSON.stringify(d) !== JSON.stringify(ST.notifs)) {
-      ST.notifs = d;
-      scheduleRender();
-    }
-  });
-  // Rides — sync history
-  _db.ref(PFX+'gtgo_rides').on('value', snap => {
-    let d = snap.val();
-    if (d && typeof d === 'object' && !Array.isArray(d)) d = Object.values(d);
-    d = d || [];
-    if (JSON.stringify(d) !== JSON.stringify(ST.rides)) {
-      ST.rides = d;
-      scheduleRender();
-    }
-  });
-  // Users — admin changes visible immediately to login screen
-  _db.ref(PFX+'gtgo_users').on('value', snap => {
-    let d = snap.val();
-    if (d && typeof d === 'object' && !Array.isArray(d)) d = Object.values(d);
-    d = d || [];
-    if (JSON.stringify(d) !== JSON.stringify(ST.users)) {
-      ST.users = d;
-      // Refresh current user session data
-      if (ST.user) { const u = ST.users.find(x=>x.id===ST.user.id); if(u) ST.user=u; }
-      scheduleRender();
-    }
-  });
-  // Drivers — online status syncs across devices
-  _db.ref(PFX+'gtgo_drvs').on('value', snap => {
-    let d = snap.val();
-    if (d && typeof d === 'object' && !Array.isArray(d)) d = Object.values(d);
-    d = d || [];
-    if (JSON.stringify(d) !== JSON.stringify(ST.drivers)) {
-      ST.drivers = d;
-      if (ST.driver) { const drv = ST.drivers.find(x=>x.id===ST.driver.id); if(drv) ST.driver={...drv}; }
-      scheduleRender();
-    }
-  });
+  const listen = (key, stKey, extra) => {
+    onValue(R(_db, PFX + key), snap => {
+      const d = toArr(snap.val());
+      if (JSON.stringify(d) !== JSON.stringify(ST[stKey])) {
+        ST[stKey] = d;
+        if (extra) extra(d);
+        scheduleRender();
+      }
+    });
+  };
+  listen('gtgo_notifs', 'notifs');
+  listen('gtgo_rides',  'rides');
+  listen('gtgo_users',  'users',   () => { if(ST.user){ const u=ST.users.find(x=>x.id===ST.user.id); if(u) ST.user=u; } });
+  listen('gtgo_drvs',   'drivers', () => { if(ST.driver){ const d=ST.drivers.find(x=>x.id===ST.driver.id); if(d) ST.driver={...d}; } });
 }
 
-// Debounced render — prevents map flickering from rapid updates
 function scheduleRender() {
-  if (ST.view === 'loading') return;
+  if (ST.view==='loading') return;
   clearTimeout(renderTimer);
   renderTimer = setTimeout(() => {
-    const onMap = (ST.view==='user'&&ST.tab==='map') || (ST.view==='driver'&&ST.tab==='map') || (ST.view==='admin'&&ST.tab==='dash');
-    if (onMap) {
-      // Soft update: only refresh non-map cards to avoid flickering
-      softUpdate();
-    } else {
-      go();
-    }
-  }, 400);
+    const onMap = (ST.view==='user'&&ST.tab==='map')||(ST.view==='driver'&&ST.tab==='map')||(ST.view==='admin'&&ST.tab==='dash');
+    if (onMap) softUpdate(); else go();
+  }, 350);
 }
-
-// Soft update: refresh content without destroying the map
 function softUpdate() {
   const tc = document.querySelector('.tc');
   if (!tc) { go(); return; }
   const tmp = document.createElement('div');
-  tmp.innerHTML = renderTabContent();
-  const newTc = tmp.querySelector('.tc');
-  if (newTc) tc.innerHTML = newTc.innerHTML;
-  else go();
+  tmp.innerHTML = `<div class="tc">${renderTabContent()}</div>`;
+  const n = tmp.querySelector('.tc');
+  if (n) tc.innerHTML = n.innerHTML;
 }
 
-// ── PWA ───────────────────────────────────────
+// ── PWA ───────────────────────────────────
 function setupPWA() {
   const svg = `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2315803d'/><text y='.9em' font-size='80' x='10'>🌿</text></svg>`;
   try {
-    const mf = {name:'Greentouch Go',short_name:'Greentouch Go',description:'Office Cab Service',start_url:'.',display:'standalone',background_color:'#14532d',theme_color:'#15803d',icons:[{src:svg,sizes:'192x192',type:'image/svg+xml'},{src:svg,sizes:'512x512',type:'image/svg+xml',purpose:'maskable'}]};
-    const mb = new Blob([JSON.stringify(mf)],{type:'application/manifest+json'});
-    const ml = document.createElement('link'); ml.rel='manifest'; ml.href=URL.createObjectURL(mb);
+    const mf = {name:'Greentouch Go',short_name:'Greentouch Go',start_url:'.',display:'standalone',background_color:'#14532d',theme_color:'#15803d',icons:[{src:svg,sizes:'192x192',type:'image/svg+xml'},{src:svg,sizes:'512x512',type:'image/svg+xml',purpose:'maskable'}]};
+    const ml = document.createElement('link'); ml.rel='manifest'; ml.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/manifest+json'}));
     document.head.appendChild(ml);
-    const al = document.createElement('link'); al.rel='apple-touch-icon'; al.href=svg;
-    document.head.appendChild(al);
+    const al = document.createElement('link'); al.rel='apple-touch-icon'; al.href=svg; document.head.appendChild(al);
   } catch(e) {}
   try {
-    const sw = `const C='gtgo-v2';self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(clients.claim()));self.addEventListener('fetch',e=>{if(e.request.url.includes('openstreetmap')||e.request.url.includes('cdnjs'))e.respondWith(caches.open(C).then(c=>c.match(e.request).then(r=>r||(fetch(e.request).then(res=>{c.put(e.request,res.clone());return res})))));});`;
+    const sw=`const C='gtgo-v3';self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(clients.claim()));self.addEventListener('fetch',e=>{if(e.request.url.includes('openstreetmap')||e.request.url.includes('cdnjs'))e.respondWith(caches.open(C).then(c=>c.match(e.request).then(r=>r||(fetch(e.request).then(res=>{c.put(e.request,res.clone());return res})))));});`;
     navigator.serviceWorker?.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'})),{scope:'./'}).catch(()=>{});
   } catch(e) {}
-  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt=e; setTimeout(()=>document.getElementById('installBanner')?.classList.add('show'),3000); });
+  window.addEventListener('beforeinstallprompt', e=>{e.preventDefault();installEvt=e;setTimeout(()=>document.getElementById('installBanner')?.classList.add('show'),3000);});
   window.addEventListener('appinstalled', dismissInstall);
   const ios = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
-  if (ios && !window.matchMedia('(display-mode:standalone)').matches) {
-    setTimeout(() => {
-      const b = document.getElementById('installBanner');
-      if (b) { b.querySelector('.ib-sub').textContent='Tap Share → "Add to Home Screen"'; b.querySelector('.ib-install').textContent='Got it'; b.querySelector('.ib-install').onclick=dismissInstall; b.classList.add('show'); }
-    }, 3000);
+  if (ios&&!window.matchMedia('(display-mode:standalone)').matches) {
+    setTimeout(()=>{const b=document.getElementById('installBanner');if(b){b.querySelector('.ib-sub').textContent='Tap Share → "Add to Home Screen"';b.querySelector('.ib-install').textContent='Got it';b.querySelector('.ib-install').onclick=dismissInstall;b.classList.add('show');}},3000);
   }
 }
 function doInstall() { if(installEvt){installEvt.prompt();installEvt.userChoice.then(dismissInstall);} }
 function dismissInstall() { document.getElementById('installBanner')?.classList.remove('show'); }
 
-// ── INIT ──────────────────────────────────────
+// ── INIT ──────────────────────────────────
 async function init() {
   setupPWA();
   if (!initFirebase()) return;
 
-  // Load or seed all shared data
-  let u = await sGet('gtgo_users');
-  if (!u || !u.length) { u = DEF_USERS.map(x=>({...x})); await sSet('gtgo_users', u); }
-  ST.users = u;
-  let d = await sGet('gtgo_drvs');
-  if (!d || !d.length) { d = DEF_DRVS.map(x=>({...x})); await sSet('gtgo_drvs', d); }
-  ST.drivers = d;
-  let c = await sGet('gtgo_cos');
-  if (!c || !c.length) { c = [...DEF_COS]; await sSet('gtgo_cos', c); }
-  ST.companies = c;
+  let u = await sGet('gtgo_users'); if(!u||!u.length){u=DEF_USERS.map(x=>({...x}));await sSet('gtgo_users',u);} ST.users=u;
+  let d = await sGet('gtgo_drvs');  if(!d||!d.length){d=DEF_DRVS.map(x=>({...x}));await sSet('gtgo_drvs',d);}  ST.drivers=d;
+  let c = await sGet('gtgo_cos');   if(!c||!c.length){c=[...DEF_COS];await sSet('gtgo_cos',c);}                  ST.companies=c;
   ST.notifs = (await sGet('gtgo_notifs')) || [];
   ST.rides  = (await sGet('gtgo_rides'))  || [];
 
-  // Restore session from localStorage
   const sess = sessGet('gtgo_sess');
   if (sess) {
-    if (sess.role==='user') {
-      const usr = ST.users.find(x=>x.id===sess.id&&x.status==='active');
-      if (usr) { ST.user=usr; ST.view='user'; ST.tab='map'; }
-    } else if (sess.role==='driver') {
-      const drv = ST.drivers.find(x=>x.id===sess.id);
-      if (drv) { ST.driver={...drv}; ST.view='driver'; ST.tab='map'; }
-    } else if (sess.role==='admin') { ST.view='admin'; ST.tab='dash'; }
+    if (sess.role==='user')  { const usr=ST.users.find(x=>x.id===sess.id&&x.status==='active');  if(usr){ST.user=usr;ST.view='user';ST.tab='map';} }
+    if (sess.role==='driver'){ const drv=ST.drivers.find(x=>x.id===sess.id);                      if(drv){ST.driver={...drv};ST.view='driver';ST.tab='map';} }
+    if (sess.role==='admin') { ST.view='admin'; ST.tab='dash'; }
   }
   if (ST.view==='loading') ST.view='login';
-
   go();
-  setupRealtime(); // Start live listeners after first render
+  setupRealtime();
 }
 
 function go() {
@@ -396,26 +336,24 @@ function go() {
 function render() {
   if (ST.view==='login')  return rLogin();
   if (ST.view==='signup') return rSignup();
-  if (ST.view==='user')   return rShell('user',  `👤 ${ST.user?.name}`, ST.user?.co);
-  if (ST.view==='driver') return rShell('driver', `🚗 ${ST.driver?.name}`, ST.driver?.veh);
-  if (ST.view==='admin')  return rShell('admin',  '🛡️ Admin', 'Management Panel');
+  if (ST.view==='user')   return rShell('user',`👤 ${ST.user?.name}`,ST.user?.co);
+  if (ST.view==='driver') return rShell('driver',`🚗 ${ST.driver?.name}`,ST.driver?.veh);
+  if (ST.view==='admin')  return rShell('admin','🛡️ Admin','Management Panel');
   return '';
 }
-
-// Build shell + tab content together
-function rShell(role, title, sub) {
-  const tabs = role==='user'   ? [['map','🗺️','Map'],['req','🔔','Notify'],['hist','📋','History']] :
-               role==='driver' ? [['map','🗺️','Map'],['reqs','🔔',`Alerts${ST.notifs.filter(n=>n.st==='pending').length?' ('+ST.notifs.filter(n=>n.st==='pending').length+')':''}`],['stat','⚙️','Status']] :
-               [['dash','📊','Dash'],['users','👤',`Users${ST.users.filter(u=>u.status==='pending').length?' ('+ST.users.filter(u=>u.status==='pending').length+')':''}`],['drvs','🚗','Drivers'],['cos','🏢','Companies'],['rides','📋','Rides']];
-  const pend = ST.users.filter(u=>u.status==='pending').length;
+function rShell(role,title,sub) {
+  const pC = ST.users.filter(u=>u.status==='pending').length;
+  const pN = ST.notifs.filter(n=>n.st==='pending').length;
+  const tabs = role==='user'?[['map','🗺️','Map'],['req','🔔','Notify'],['hist','📋','History']]:
+               role==='driver'?[['map','🗺️','Map'],['reqs','🔔',`Alerts${pN?' ('+pN+')':''}`],['stat','⚙️','Status']]:
+               [['dash','📊','Dash'],['users','👤',`Users${pC?' ('+pC+')':''}`],['drvs','🚗','Drivers'],['cos','🏢','Companies'],['rides','📋','Rides']];
   return `<div class="ac">${hdr(title,sub)}
     <div class="tb">${tabs.map(([t,i,l])=>`<button class="tbb ${ST.tab===t?'act':''}" onclick="setTab('${t}')">
-      <span class="ti">${i}</span>${l}${role==='admin'&&t==='users'&&pend?`<span class="ndot"></span>`:''}
+      <span class="ti">${i}</span>${l}${role==='admin'&&t==='users'&&pC?`<span class="ndot"></span>`:''}
     </button>`).join('')}</div>
     <div class="tc">${renderTabContent()}</div>
   </div>`;
 }
-
 function renderTabContent() {
   if (ST.view==='user')   return rUserTab();
   if (ST.view==='driver') return rDriverTab();
@@ -423,32 +361,27 @@ function renderTabContent() {
   return '';
 }
 
-// ── MAP ───────────────────────────────────────
+// ── MAP ───────────────────────────────────
 function initMap() {
-  const el = document.getElementById('leaflet-map');
-  if (!el) return;
+  const el = document.getElementById('leaflet-map'); if(!el) return;
   if (MAP) { MAP.remove(); MAP=null; }
   MAP = L.map('leaflet-map').setView([10.0069,76.3647],14);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(MAP);
-  const mk = (e,bg) => L.divIcon({className:'',html:`<div style="background:${bg};color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:17px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)">${e}</div>`,iconSize:[36,36],iconAnchor:[18,18]});
+  const mk=(e,bg)=>L.divIcon({className:'',html:`<div style="background:${bg};color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:17px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)">${e}</div>`,iconSize:[36,36],iconAnchor:[18,18]});
   L.marker([PARK.lat,PARK.lng],{icon:mk('🅿️','#d97706')}).addTo(MAP).bindPopup('<b>🅿️ Parking Ground</b><br>Smart City, Kakkanad');
   L.marker([OFFC.lat,OFFC.lng],{icon:mk('🏢','#15803d')}).addTo(MAP).bindPopup('<b>🏢 Greentouch Spaces</b><br>Smart City, Kakkanad');
   L.polyline([[PARK.lat,PARK.lng],[OFFC.lat,OFFC.lng]],{color:'#22c55e',weight:4,opacity:.6,dashArray:'8,6'}).addTo(MAP);
-  ST.drivers.forEach(d => {
-    const c = d.online?(d.st==='available'?'#15803d':'#d97706'):'#94a3b8';
-    const ic = L.divIcon({className:'',html:`<div style="background:${c};color:#fff;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.22);white-space:nowrap">🚗 ${d.veh.slice(-4)}</div>`,iconSize:[68,24],iconAnchor:[34,12]});
+  ST.drivers.forEach(d=>{
+    const c=d.online?(d.st==='available'?'#15803d':'#d97706'):'#94a3b8';
+    const ic=L.divIcon({className:'',html:`<div style="background:${c};color:#fff;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.22);white-space:nowrap">🚗 ${d.veh.slice(-4)}</div>`,iconSize:[68,24],iconAnchor:[34,12]});
     L.marker([d.lat,d.lng],{icon:ic}).addTo(MAP).bindPopup(`<b>${d.name}</b><br>${d.veh}<br>${d.st}`);
   });
-  if (ST.view==='driver'&&ST.driver) {
-    const d = ST.drivers.find(x=>x.id===ST.driver.id);
-    if (d) MAP.setView([d.lat,d.lng],15);
-  }
+  if (ST.view==='driver'&&ST.driver){const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d)MAP.setView([d.lat,d.lng],15);}
 }
 
-// ── LOGIN ─────────────────────────────────────
+// ── LOGIN ─────────────────────────────────
 function rLogin() {
-  const isAdm = ST.role==='admin';
-  const pendCount = ST.users.filter(u=>u.status==='pending').length;
+  const isAdm=ST.role==='admin', pC=ST.users.filter(u=>u.status==='pending').length;
   return `<div class="ls">
     <div class="l-logo-wrap"><span style="font-size:36px">🌿</span></div>
     <div class="l-title">Greentouch <span>Go</span></div>
@@ -457,7 +390,7 @@ function rLogin() {
       <div class="rtabs">
         <button class="rtab ${ST.role==='user'?'act':''}" onclick="ST.role='user';go()">👤 Staff</button>
         <button class="rtab ${ST.role==='driver'?'act':''}" onclick="ST.role='driver';go()">🚗 Driver</button>
-        <button class="rtab ${ST.role==='admin'?'act':''}" onclick="ST.role='admin';go()">🛡️ Admin${pendCount?`<span class="notif-dot"></span>`:''}</button>
+        <button class="rtab ${ST.role==='admin'?'act':''}" onclick="ST.role='admin';go()">🛡️ Admin${pC?`<span class="notif-dot"></span>`:''}</button>
       </div>
       ${!isAdm?`<div class="fg"><label>Login ID</label><input id="lid" placeholder="Your login ID" autocomplete="username"></div>`:''}
       <div class="fg"><label>${isAdm?'Admin Password':'Password'}</label>
@@ -467,11 +400,10 @@ function rLogin() {
         </div>
       </div>
       <button class="btn bp" onclick="doLogin()">Login →</button>
-      ${!isAdm?`
-        <div class="or-divider">or</div>
+      ${!isAdm?`<div class="or-divider">or</div>
         <button class="btn bo" onclick="goSignup()">✍️ New User? Sign Up</button>
-        <div class="hint">🔑 Or contact your admin for credentials</div>
-      `:'<div class="hint" style="margin-top:10px">Demo password: <b>admin123</b></div>'}
+        <div class="hint">🔑 Or contact your admin for credentials</div>`
+      :`<div class="hint" style="margin-top:10px">Demo password: <b>admin123</b></div>`}
     </div>
   </div>`;
 }
@@ -481,38 +413,32 @@ async function doLogin() {
   if (!pwd) return alert('Enter your password');
   if (ST.role==='user') {
     if (!id) return alert('Enter your Login ID');
-    // Refresh users from Firebase before checking
-    const fresh = await sGet('gtgo_users');
-    if (fresh) ST.users = fresh;
+    const fresh = await sGet('gtgo_users'); if(fresh) ST.users=fresh;
     const u = ST.users.find(x=>x.id===id&&x.pwd===pwd);
     if (!u) return alert('Invalid Login ID or password');
-    if (u.status==='pending') return alert('⏳ Your account is awaiting admin approval.\nPlease try again after approval.');
-    if (u.status==='rejected') return alert('❌ Your account was rejected.\nContact admin for help.');
-    ST.user=u; ST.view='user'; ST.tab='map';
-    sessSet('gtgo_sess',{role:'user',id:u.id}); go();
+    if (u.status==='pending') return alert('⏳ Your account is awaiting admin approval.');
+    if (u.status==='rejected') return alert('❌ Your account was rejected. Contact admin.');
+    ST.user=u; ST.view='user'; ST.tab='map'; sessSet('gtgo_sess',{role:'user',id:u.id}); go();
   } else if (ST.role==='driver') {
     if (!id) return alert('Enter your Login ID');
-    const fresh = await sGet('gtgo_drvs');
-    if (fresh) ST.drivers = fresh;
+    const fresh = await sGet('gtgo_drvs'); if(fresh) ST.drivers=fresh;
     const d = ST.drivers.find(x=>x.id===id&&x.pwd===pwd);
     if (!d) return alert('Invalid Login ID or password');
-    ST.driver={...d}; ST.view='driver'; ST.tab='map';
-    sessSet('gtgo_sess',{role:'driver',id:d.id}); go();
+    ST.driver={...d}; ST.view='driver'; ST.tab='map'; sessSet('gtgo_sess',{role:'driver',id:d.id}); go();
   } else {
     if (pwd!=='admin123') return alert('Invalid admin password');
-    ST.view='admin'; ST.tab='dash';
-    sessSet('gtgo_sess',{role:'admin',id:'admin'}); go();
+    ST.view='admin'; ST.tab='dash'; sessSet('gtgo_sess',{role:'admin',id:'admin'}); go();
   }
 }
 function goSignup() { ST.view='signup'; ST.signupStep=1; go(); }
 
-// ── SIGNUP ────────────────────────────────────
+// ── SIGNUP ────────────────────────────────
 function rSignup() {
-  const s = ST.signupStep;
+  const s=ST.signupStep;
   return `<div class="signup-screen">
     <div class="signup-header">
       <button onclick="ST.view='login';go()" style="background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">←</button>
-      <div><div style="font-weight:800;font-size:16px">🌿 Create Account</div><div style="font-size:11px;opacity:.7">Greentouch Go Staff Signup</div></div>
+      <div><div style="font-weight:800;font-size:16px">🌿 Create Account</div><div style="font-size:11px;opacity:.7">Staff Signup</div></div>
     </div>
     <div class="signup-body">
       <div class="step-indicator">
@@ -525,31 +451,25 @@ function rSignup() {
       ${s===1?`<div class="card"><div class="ct">👤 Personal Info</div>
         <div class="fg"><label>Full Name</label><input id="s-nm" placeholder="Your full name"></div>
         <div class="fg"><label>Company</label><select id="s-co"><option value="">Select company</option>${ST.companies.map(c=>`<option>${c}</option>`).join('')}</select></div>
-        <div class="fg"><label>Mobile Number</label><input id="s-mb" type="tel" placeholder="+91 XXXXX XXXXX"></div>
-        <button class="btn bp" onclick="signupStep1()">Next →</button>
-      </div>`:''}
-      ${s===2?`<div class="card"><div class="ct">🔐 Login Credentials</div>
-        <div class="fg"><label>Choose Login ID</label><input id="s-id" placeholder="e.g. john.smith (no spaces)"></div>
+        <div class="fg"><label>Mobile</label><input id="s-mb" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        <button class="btn bp" onclick="signupStep1()">Next →</button></div>`:''}
+      ${s===2?`<div class="card"><div class="ct">🔐 Credentials</div>
+        <div class="fg"><label>Login ID</label><input id="s-id" placeholder="e.g. john.smith (no spaces)"></div>
         <div class="fg"><label>Password</label>
-          <div class="pw-wrap">
-            <input id="s-pwd" type="${ST.showPwd?'text':'password'}" placeholder="Min. 6 characters">
-            <button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button>
-          </div>
+          <div class="pw-wrap"><input id="s-pwd" type="${ST.showPwd?'text':'password'}" placeholder="Min. 6 characters">
+          <button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button></div>
         </div>
         <div class="fg"><label>Confirm Password</label><input id="s-pwd2" type="password" placeholder="Re-enter password"></div>
         <button class="btn bp" onclick="signupStep2()" style="margin-bottom:10px">Submit →</button>
-        <button class="btn bgray" onclick="ST.signupStep=1;go()">← Back</button>
-      </div>`:''}
+        <button class="btn bgray" onclick="ST.signupStep=1;go()">← Back</button></div>`:''}
       ${s===3?`<div class="success-screen">
         <div class="success-icon">✅</div>
         <div style="font-size:20px;font-weight:900;color:#14532d;margin-bottom:8px">Request Submitted!</div>
-        <div style="font-size:14px;color:#4b7a5a;margin-bottom:20px;line-height:1.6">Your account is pending admin approval.<br>You'll be able to login once approved.</div>
+        <div style="font-size:14px;color:#4b7a5a;margin-bottom:20px;line-height:1.6">Pending admin approval. You can login once approved.</div>
         <div class="card" style="text-align:left;margin-bottom:16px"><div class="ct">📋 Your Details</div>
           <div style="font-size:13px;color:#14532d;line-height:2">
-            <div><b>Name:</b> ${ST._sd?.name||''}</div>
-            <div><b>Company:</b> ${ST._sd?.co||''}</div>
-            <div><b>Login ID:</b> ${ST._sd?.id||''}</div>
-            <div><b>Mobile:</b> ${ST._sd?.mob||''}</div>
+            <div><b>Name:</b> ${ST._sd?.name||''}</div><div><b>Company:</b> ${ST._sd?.co||''}</div>
+            <div><b>Login ID:</b> ${ST._sd?.id||''}</div><div><b>Mobile:</b> ${ST._sd?.mob||''}</div>
           </div>
         </div>
         <button class="btn bp" onclick="ST.view='login';ST.role='user';go()">Go to Login</button>
@@ -557,29 +477,24 @@ function rSignup() {
     </div>
   </div>`;
 }
-
 async function signupStep1() {
   const nm=v('s-nm'),co=v('s-co'),mb=v('s-mb');
-  if (!nm) return alert('Enter your full name');
-  if (!co) return alert('Select your company');
-  if (!mb||mb.replace(/\D/g,'').length<10) return alert('Enter a valid mobile number');
+  if(!nm) return alert('Enter your full name');
+  if(!co) return alert('Select your company');
+  if(!mb||mb.replace(/\D/g,'').length<10) return alert('Enter a valid mobile number');
   ST._sd={name:nm,co,mob:mb}; ST.signupStep=2; go();
 }
 async function signupStep2() {
-  const id=v('s-id'), pwd=v('s-pwd'), pwd2=v('s-pwd2');
-  if (!id||id.includes(' ')) return alert('Login ID must have no spaces');
-  // Refresh users before checking duplicate
-  const fresh = await sGet('gtgo_users');
-  if (fresh) ST.users = fresh;
-  if (ST.users.find(u=>u.id===id)) return alert('This Login ID is taken. Try another.');
-  if (!pwd||pwd.length<6) return alert('Password must be at least 6 characters');
-  if (pwd!==pwd2) return alert('Passwords do not match');
-  const nu = {id,pwd,name:ST._sd.name,co:ST._sd.co,mob:ST._sd.mob,status:'pending',signupTime:ts()};
-  ST.users.push(nu);
-  await sSet('gtgo_users', ST.users);
-  ST._sd = {...ST._sd,id}; ST.signupStep=3; go();
+  const id=v('s-id'),pwd=v('s-pwd'),pwd2=v('s-pwd2');
+  if(!id||id.includes(' ')) return alert('Login ID must have no spaces');
+  const fresh=await sGet('gtgo_users'); if(fresh) ST.users=fresh;
+  if(ST.users.find(u=>u.id===id)) return alert('This Login ID is taken. Try another.');
+  if(!pwd||pwd.length<6) return alert('Password must be at least 6 characters');
+  if(pwd!==pwd2) return alert('Passwords do not match');
+  ST.users.push({id,pwd,name:ST._sd.name,co:ST._sd.co,mob:ST._sd.mob,status:'pending',signupTime:ts()});
+  await sSet('gtgo_users',ST.users);
+  ST._sd={...ST._sd,id}; ST.signupStep=3; go();
 }
-
 async function logout() {
   sessDel('gtgo_sess');
   Object.assign(ST,{view:'login',user:null,driver:null,tab:'map',selLoc:null,editUId:null,editDId:null,showPwd:false});
@@ -587,10 +502,10 @@ async function logout() {
 }
 function setTab(t) { ST.tab=t; ST.editUId=null; ST.editDId=null; go(); }
 
-// ── USER TABS ─────────────────────────────────
+// ── USER TABS ─────────────────────────────
 function rUserTab() {
   if (ST.tab==='map') {
-    const on = ST.drivers.filter(d=>d.online);
+    const on=ST.drivers.filter(d=>d.online);
     return `<div class="card" style="padding:9px"><div class="mc"><div id="leaflet-map"></div></div></div>
     <div class="card"><div class="ct">🚗 Cabs (${on.length} online)</div>
       ${on.length?on.map(d=>`<div class="dc"><div class="dav">🚗</div>
@@ -600,12 +515,10 @@ function rUserTab() {
     </div>`;
   }
   if (ST.tab==='req') {
-    const mine = ST.notifs.find(n=>n.uid===ST.user.id&&n.st!=='done');
+    const mine=ST.notifs.find(n=>n.uid===ST.user.id&&n.st!=='done');
     if (mine) {
-      const drv = ST.drivers.find(d=>d.id===mine.did);
-      return `<div class="ab ${mine.st==='acc'?'as2':'ai'}">
-        ${mine.st==='acc'?`✅ <b>${drv?.name}</b> is on the way!`:'⏳ Waiting for a driver to accept...'}
-      </div>
+      const drv=ST.drivers.find(d=>d.id===mine.did);
+      return `<div class="ab ${mine.st==='acc'?'as2':'ai'}">${mine.st==='acc'?`✅ <b>${drv?.name}</b> is on the way!`:'⏳ Waiting for a driver to accept...'}</div>
       <div class="card"><div class="ct">🔔 Active Request</div>
         <div style="font-size:14px;margin-bottom:7px"><b>Waiting at:</b> ${mine.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div>
         <div style="font-size:12px;color:var(--gr);margin-bottom:8px">Since ${mine.time}</div>
@@ -626,7 +539,7 @@ function rUserTab() {
     </div>`;
   }
   if (ST.tab==='hist') {
-    const mine = ST.rides.filter(r=>r.uid===ST.user.id);
+    const mine=ST.rides.filter(r=>r.uid===ST.user.id);
     return `<div class="card"><div class="ct">📋 My Rides (${mine.length})</div>
       ${mine.length?mine.map(r=>`<div class="nc ${r.loc==='park'?'park':'off2'}">
         <div><div class="nn">${r.loc==='park'?'🅿️ Parking → Office':'🏢 Office → Parking'}</div>
@@ -637,25 +550,19 @@ function rUserTab() {
   }
   return '';
 }
-
 async function sendNotif() {
-  if (!ST.selLoc) return;
-  if (!ST.drivers.filter(d=>d.online&&d.st==='available').length) return alert('No available drivers. Please try again soon.');
-  const notif = {id:uid(),uid:ST.user.id,uname:ST.user.name,co:ST.user.co,mob:ST.user.mob,loc:ST.selLoc,st:'pending',did:null,time:ts()};
-  ST.notifs.push(notif);
-  await sSet('gtgo_notifs', ST.notifs);
-  ST.selLoc=null; go();
+  if(!ST.selLoc) return;
+  if(!ST.drivers.filter(d=>d.online&&d.st==='available').length) return alert('No available drivers. Try again soon.');
+  ST.notifs.push({id:uid(),uid:ST.user.id,uname:ST.user.name,co:ST.user.co,mob:ST.user.mob,loc:ST.selLoc,st:'pending',did:null,time:ts()});
+  await sSet('gtgo_notifs',ST.notifs); ST.selLoc=null; go();
 }
-async function cancelReq(id) {
-  ST.notifs = ST.notifs.filter(n=>n.id!==id);
-  await sSet('gtgo_notifs', ST.notifs); go();
-}
+async function cancelReq(id) { ST.notifs=ST.notifs.filter(n=>n.id!==id); await sSet('gtgo_notifs',ST.notifs); go(); }
 
-// ── DRIVER TABS ───────────────────────────────
+// ── DRIVER TABS ───────────────────────────
 function rDriverTab() {
-  const me = ST.drivers.find(x=>x.id===ST.driver?.id)||ST.driver;
-  const pend = ST.notifs.filter(n=>n.st==='pending');
-  const myAcc = ST.notifs.filter(n=>n.did===me?.id&&n.st==='acc');
+  const me=ST.drivers.find(x=>x.id===ST.driver?.id)||ST.driver;
+  const pend=ST.notifs.filter(n=>n.st==='pending');
+  const myAcc=ST.notifs.filter(n=>n.did===me?.id&&n.st==='acc');
   if (ST.tab==='map') {
     return `<div class="card" style="padding:9px"><div class="mc"><div id="leaflet-map"></div></div></div>
     ${myAcc.length?`<div class="ab aw">🚗 Pick up <b>${myAcc[0].uname}</b> at ${myAcc[0].loc==='park'?'🅿️ Parking':'🏢 Office'}</div>`:''}
@@ -686,7 +593,7 @@ function rDriverTab() {
     </div>`;
   }
   if (ST.tab==='stat') {
-    const todT = ST.rides.filter(r=>r.did===me?.id).length;
+    const todT=ST.rides.filter(r=>r.did===me?.id).length;
     return `<div class="card"><div class="ct">⚙️ My Status</div>
       <div class="dc" style="margin-bottom:0">
         <div class="dav">🚗</div>
@@ -706,77 +613,61 @@ function rDriverTab() {
   }
   return '';
 }
-
 async function accReq(id) {
-  const n = ST.notifs.find(x=>x.id===id); if(!n) return;
-  if (ST.notifs.find(x=>x.did===ST.driver.id&&x.st==='acc')) { alert('Finish current pickup first!'); return; }
+  const n=ST.notifs.find(x=>x.id===id); if(!n) return;
+  if(ST.notifs.find(x=>x.did===ST.driver.id&&x.st==='acc')){alert('Finish current pickup first!');return;}
   n.st='acc'; n.did=ST.driver.id;
-  const d = ST.drivers.find(x=>x.id===ST.driver.id);
-  if (d) { d.st='busy'; ST.driver.st='busy'; }
-  await sSet('gtgo_notifs', ST.notifs);
-  await sSet('gtgo_drvs', ST.drivers); go();
+  const d=ST.drivers.find(x=>x.id===ST.driver.id); if(d){d.st='busy';ST.driver.st='busy';}
+  await sSet('gtgo_notifs',ST.notifs); await sSet('gtgo_drvs',ST.drivers); go();
 }
-async function decReq(id) {
-  ST.notifs = ST.notifs.filter(n=>n.id!==id);
-  await sSet('gtgo_notifs', ST.notifs); go();
-}
+async function decReq(id) { ST.notifs=ST.notifs.filter(n=>n.id!==id); await sSet('gtgo_notifs',ST.notifs); go(); }
 async function doneRide(id) {
-  const n = ST.notifs.find(x=>x.id===id); if(!n) return;
+  const n=ST.notifs.find(x=>x.id===id); if(!n) return;
   ST.rides.push({id:uid(),uid:n.uid,uname:n.uname,co:n.co,loc:n.loc,did:ST.driver.id,dname:ST.driver.name,time:ts()});
-  ST.notifs = ST.notifs.filter(x=>x.id!==id);
-  const d = ST.drivers.find(x=>x.id===ST.driver.id);
-  if (d) { d.st='available'; d.trips=(d.trips||0)+1; ST.driver.st='available'; }
-  await sSet('gtgo_notifs', ST.notifs);
-  await sSet('gtgo_rides',  ST.rides);
-  await sSet('gtgo_drvs',   ST.drivers); go();
+  ST.notifs=ST.notifs.filter(x=>x.id!==id);
+  const d=ST.drivers.find(x=>x.id===ST.driver.id); if(d){d.st='available';d.trips=(d.trips||0)+1;ST.driver.st='available';}
+  await sSet('gtgo_notifs',ST.notifs); await sSet('gtgo_rides',ST.rides); await sSet('gtgo_drvs',ST.drivers); go();
 }
 async function toggleDrv(id) {
-  const d = ST.drivers.find(x=>x.id===id); if(!d) return;
+  const d=ST.drivers.find(x=>x.id===id); if(!d) return;
   d.online=!d.online; d.st=d.online?'available':'offline';
-  if (ST.driver?.id===id) { ST.driver.online=d.online; ST.driver.st=d.st; }
-  await sSet('gtgo_drvs', ST.drivers); go();
+  if(ST.driver?.id===id){ST.driver.online=d.online;ST.driver.st=d.st;}
+  await sSet('gtgo_drvs',ST.drivers); go();
 }
 
-// ── ADMIN TABS ────────────────────────────────
+// ── ADMIN TABS ────────────────────────────
 function rAdminTab() {
-  const pending = ST.users.filter(u=>u.status==='pending');
-  const active  = ST.users.filter(u=>u.status==='active');
-  const pend    = ST.notifs.filter(n=>n.st==='pending').length;
-
+  const pending=ST.users.filter(u=>u.status==='pending'), active=ST.users.filter(u=>u.status==='active');
+  const pend=ST.notifs.filter(n=>n.st==='pending').length;
   if (ST.tab==='dash') {
-    const activeR = ST.notifs.filter(n=>n.st!=='done');
+    const aR=ST.notifs.filter(n=>n.st!=='done');
     return `<div class="sg" style="grid-template-columns:repeat(4,1fr)">
       <div class="sc"><div class="sv">${active.length}</div><div class="sl">Users</div></div>
       <div class="sc"><div class="sv">${ST.drivers.length}</div><div class="sl">Drivers</div></div>
       <div class="sc"><div class="sv" style="color:#d97706">${pend}</div><div class="sl">Pending</div></div>
       <div class="sc"><div class="sv">${ST.rides.length}</div><div class="sl">Rides</div></div>
     </div>
-    ${pending.length?`<div class="ab aw">⚠️ <b>${pending.length} signup${pending.length>1?'s':''}</b> awaiting approval — <button class="link-btn" onclick="setTab('users')">Review →</button></div>`:''}
+    ${pending.length?`<div class="ab aw">⚠️ <b>${pending.length} signup${pending.length>1?'s':''}</b> awaiting — <button class="link-btn" onclick="setTab('users')">Review →</button></div>`:''}
     <div class="card" style="padding:9px"><div class="ct">🗺️ Live Fleet Map</div><div class="mc"><div id="leaflet-map"></div></div></div>
-    ${activeR.length?`<div class="card"><div class="ct">⚠️ Active Requests</div>
-      ${activeR.map(n=>`<div class="nc ${n.loc==='park'?'park':'off2'}">
-        <div><div class="nn">${n.uname} <span class="badge bb">${n.co}</span></div>
-        <div class="nd">${n.loc==='park'?'🅿️ Parking':'🏢 Office'} · ${n.time}</div></div>
-        <span class="badge ${n.st==='acc'?'bg2':'by'}">${n.st==='acc'?'Accepted':'Pending'}</span>
-      </div>`).join('')}</div>`:''}`;
+    ${aR.length?`<div class="card"><div class="ct">⚠️ Active Requests</div>${aR.map(n=>`<div class="nc ${n.loc==='park'?'park':'off2'}">
+      <div><div class="nn">${n.uname} <span class="badge bb">${n.co}</span></div>
+      <div class="nd">${n.loc==='park'?'🅿️ Parking':'🏢 Office'} · ${n.time}</div></div>
+      <span class="badge ${n.st==='acc'?'bg2':'by'}">${n.st==='acc'?'Accepted':'Pending'}</span>
+    </div>`).join('')}</div>`:''}`;
   }
-
   if (ST.tab==='users') {
     return `${pending.length?`<div class="card" style="border:1.5px solid #fde68a;background:#fffbeb">
       <div class="ct" style="color:#b45309">⏳ Pending Approval (${pending.length})</div>
       ${pending.map(u=>`<div class="pending-row"><div class="pending-main">
         <div style="width:36px;height:36px;background:linear-gradient(135deg,#d97706,#fbbf24);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">👤</div>
-        <div style="flex:1;min-width:0">
-          <div style="font-weight:700;color:#92400e;font-size:13px">${u.name}</div>
-          <div style="font-size:11px;color:#b45309">ID: <b>${u.id}</b> · ${u.co}</div>
-          <div style="font-size:11px;color:#b45309">📱 ${u.mob}</div>
-        </div>
+        <div style="flex:1;min-width:0"><div style="font-weight:700;color:#92400e;font-size:13px">${u.name}</div>
+        <div style="font-size:11px;color:#b45309">ID: <b>${u.id}</b> · ${u.co}</div>
+        <div style="font-size:11px;color:#b45309">📱 ${u.mob}</div></div>
         <div style="display:flex;gap:5px;flex-shrink:0">
           <button class="btn bg bsm" onclick="approveUser('${u.id}')">✓ Approve</button>
           <button class="btn br bsm" onclick="rejectUser('${u.id}')">✕ Reject</button>
         </div>
-      </div></div>`).join('')}
-    </div>`:''}
+      </div></div>`).join('')}</div>`:''}
     <div class="card"><div class="ct">➕ Add User</div>
       <div class="g2">
         <div class="fg"><label>Login ID</label><input id="nu-id" placeholder="e.g. user03"></div>
@@ -808,7 +699,6 @@ function rAdminTab() {
       </div>`).join(''):'<div class="es"><div class="ei">👤</div><p>No active users</p></div>'}
     </div>`;
   }
-
   if (ST.tab==='drvs') {
     return `<div class="card"><div class="ct">➕ Add Driver</div>
       <div class="g2">
@@ -840,19 +730,16 @@ function rAdminTab() {
       </div>`).join(''):'<div class="es"><div class="ei">🚗</div><p>No drivers yet</p></div>'}
     </div>`;
   }
-
   if (ST.tab==='cos') {
     return `<div class="card"><div class="ct">➕ Add Company</div>
       <div style="display:flex;gap:9px">
         <input id="nco" placeholder="Company name" style="flex:1;padding:10px 12px;border:1.5px solid #d1fae5;border-radius:9px;font-size:14px;outline:none;color:#14532d">
         <button class="btn bp bsm" onclick="addCo()" style="white-space:nowrap">Add</button>
-      </div>
-    </div>
+      </div></div>
     <div class="card"><div class="ct">🏢 Companies (${ST.companies.length})</div>
       ${ST.companies.map((c,i)=>`<div class="ci"><span class="cn">🏢 ${c}</span><button class="btn br bsm" onclick="remCo(${i})">Remove</button></div>`).join('')}
     </div>`;
   }
-
   if (ST.tab==='rides') {
     return `<div class="card"><div class="ct">📋 Ride History (${ST.rides.length})</div>
       ${ST.rides.length?`<div style="overflow-x:auto"><table>
@@ -864,32 +751,22 @@ function rAdminTab() {
   return '';
 }
 
-// ── ADMIN ACTIONS ─────────────────────────────
-async function approveUser(uid) {
-  const u=ST.users.find(x=>x.id===uid); if(u) u.status='active';
-  await sSet('gtgo_users',ST.users); go();
-}
-async function rejectUser(uid) {
-  ST.users=ST.users.filter(x=>x.id!==uid);
-  await sSet('gtgo_users',ST.users); go();
-}
+// ── ADMIN ACTIONS ─────────────────────────
+async function approveUser(uid) { const u=ST.users.find(x=>x.id===uid);if(u)u.status='active';await sSet('gtgo_users',ST.users);go(); }
+async function rejectUser(uid) { ST.users=ST.users.filter(x=>x.id!==uid);await sSet('gtgo_users',ST.users);go(); }
 async function addUser() {
   const id=v('nu-id'),pwd=v('nu-pwd'),nm=v('nu-nm'),mb=v('nu-mb'),co=v('nu-co');
   if(!id||!pwd||!nm||!mb||!co) return alert('Fill all fields');
   if(ST.users.find(u=>u.id===id)) return alert('Login ID already exists');
-  ST.users.push({id,pwd,name:nm,co,mob:mb,status:'active'});
-  await sSet('gtgo_users',ST.users); go();
+  ST.users.push({id,pwd,name:nm,co,mob:mb,status:'active'}); await sSet('gtgo_users',ST.users); go();
 }
 async function saveEditU(uid) {
-  const u=ST.users.find(x=>x.id===uid); if(!u) return;
+  const u=ST.users.find(x=>x.id===uid);if(!u) return;
   const pwd=v('eu-pwd'),mb=v('eu-mb'),co=v('eu-co');
   if(pwd) u.pwd=pwd; if(mb) u.mob=mb; if(co) u.co=co;
   ST.editUId=null; await sSet('gtgo_users',ST.users); go();
 }
-async function delUser(uid) {
-  ST.users=ST.users.filter(u=>u.id!==uid);
-  await sSet('gtgo_users',ST.users); go();
-}
+async function delUser(uid) { ST.users=ST.users.filter(u=>u.id!==uid);await sSet('gtgo_users',ST.users);go(); }
 async function addDrv() {
   const id=v('nd-id'),pwd=v('nd-pwd'),nm=v('nd-nm'),veh=v('nd-veh');
   if(!id||!pwd||!nm||!veh) return alert('Fill all fields');
@@ -898,32 +775,38 @@ async function addDrv() {
   await sSet('gtgo_drvs',ST.drivers); go();
 }
 async function saveEditD(did) {
-  const d=ST.drivers.find(x=>x.id===did); if(!d) return;
+  const d=ST.drivers.find(x=>x.id===did);if(!d) return;
   const pwd=v('ed-pwd'),veh=v('ed-veh');
   if(pwd) d.pwd=pwd; if(veh) d.veh=veh;
   ST.editDId=null; await sSet('gtgo_drvs',ST.drivers); go();
 }
-async function delDrv(did) {
-  ST.drivers=ST.drivers.filter(d=>d.id!==did);
-  await sSet('gtgo_drvs',ST.drivers); go();
-}
+async function delDrv(did) { ST.drivers=ST.drivers.filter(d=>d.id!==did);await sSet('gtgo_drvs',ST.drivers);go(); }
 async function addCo() {
   const val=(document.getElementById('nco')?.value||'').trim();
   if(!val) return alert('Enter a company name');
   if(ST.companies.includes(val)) return alert('Already exists');
   ST.companies.push(val); await sSet('gtgo_cos',ST.companies); go();
 }
-async function remCo(i) {
-  ST.companies.splice(i,1); await sSet('gtgo_cos',ST.companies); go();
-}
+async function remCo(i) { ST.companies.splice(i,1); await sSet('gtgo_cos',ST.companies); go(); }
 
 function hdr(title,sub) {
-  return `<div class="ah"><div class="ah-l">
-    <div class="ah-logo">🌿</div>
+  return `<div class="ah"><div class="ah-l"><div class="ah-logo">🌿</div>
     <div><div class="at">Greentouch <span>Go</span></div>
     <div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:1px">${title}${sub?' · '+sub:''}</div></div>
   </div><button class="lbtn" onclick="logout()">Logout</button></div>`;
 }
+
+// ── EXPOSE TO WINDOW (required for type="module") ──
+Object.assign(window, {
+  ST, go, setTab, logout, doLogin, goSignup,
+  signupStep1, signupStep2,
+  sendNotif, cancelReq,
+  accReq, decReq, doneRide, toggleDrv,
+  approveUser, rejectUser, addUser, saveEditU, delUser,
+  addDrv, saveEditD, delDrv,
+  addCo, remCo,
+  doInstall, dismissInstall
+});
 
 init();
 </script>
