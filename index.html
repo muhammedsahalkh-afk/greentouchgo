@@ -11,21 +11,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 /* ── LEAFLET ── */
-.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none!important;max-height:none!important}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{touch-action:pinch-zoom}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform;transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:grab}.leaflet-popup-pane,.leaflet-control{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive{cursor:grabbing}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive{pointer-events:auto}.leaflet-container{background:#ddd;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5}.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}.leaflet-bar a{background:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}.leaflet-touch .leaflet-bar a{width:30px;height:30px;line-height:30px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-container .leaflet-control-attribution{background:rgba(255,255,255,.8);margin:0}.leaflet-control-attribution{padding:0 5px;color:#333}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;transform:rotate(45deg)}.leaflet-popup-content{margin:13px 24px;line-height:1.3;word-break:break-word}.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;background:transparent;cursor:pointer}.leaflet-div-icon{background:#fff;border:1px solid #666}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-container{overflow:hidden}.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-tile{max-width:none!important;max-height:none!important}.leaflet-container img.leaflet-tile{mix-blend-mode:plus-lighter}.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{touch-action:pinch-zoom}.leaflet-container{-webkit-tap-highlight-color:transparent}.leaflet-tile{filter:inherit;visibility:hidden}.leaflet-tile-loaded{visibility:inherit}.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800}.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-right .leaflet-control{float:right}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}.leaflet-zoom-animated{transform-origin:0 0}.leaflet-zoom-anim .leaflet-zoom-animated{will-change:transform;transition:transform .25s cubic-bezier(0,0,.25,1)}.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:grab}.leaflet-popup-pane,.leaflet-control{cursor:auto}.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive{cursor:grabbing}.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive{pointer-events:auto}.leaflet-container{background:#e8ecf0;font-family:Helvetica Neue,Arial,sans-serif;font-size:12px;line-height:1.5}.leaflet-bar{box-shadow:0 2px 8px rgba(0,0,0,.2);border-radius:8px}.leaflet-bar a{background:#fff;border-bottom:1px solid #e8ecf0;width:30px;height:30px;line-height:30px;display:block;text-align:center;text-decoration:none;color:#333}.leaflet-bar a:first-child{border-radius:8px 8px 0 0}.leaflet-bar a:last-child{border-radius:0 0 8px 8px;border-bottom:none}.leaflet-touch .leaflet-bar a{width:34px;height:34px;line-height:34px}.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px 'Lucida Console',Monaco,monospace;text-indent:1px}.leaflet-container .leaflet-control-attribution{background:rgba(255,255,255,.7);margin:0;font-size:10px;border-radius:6px 0 0 0}.leaflet-control-attribution{padding:2px 6px;color:#666}.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{background:#fff;color:#333;box-shadow:0 4px 16px rgba(0,0,0,.15);border-radius:12px;padding:1px}.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;transform:rotate(45deg);background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.15)}.leaflet-popup-content{margin:12px 18px;line-height:1.5;word-break:break-word}.leaflet-popup-close-button{position:absolute;top:6px;right:8px;border:none;font:18px/1 Arial,sans-serif;color:#999;background:transparent;cursor:pointer}.leaflet-div-icon{background:transparent;border:none}
 /* ── APP ── */
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100vh}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0fdf4}
 :root{--p:#15803d;--pl:#22c55e;--p2:#166534;--g:#16a34a;--w:#d97706;--r:#dc2626;--dk:#14532d;--gr:#4b7a5a}
+/* Install Banner */
 .install-banner{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#14532d,#15803d);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px;z-index:9999;box-shadow:0 -4px 20px rgba(0,0,0,.2);transform:translateY(100%);transition:transform .3s}
 .install-banner.show{transform:translateY(0)}
 .ib-icon{font-size:26px;flex-shrink:0}.ib-text{flex:1;font-size:13px}.ib-title{font-weight:800;margin-bottom:2px}.ib-sub{opacity:.8;font-size:11px}.ib-btns{display:flex;gap:8px;flex-shrink:0}
 .ib-install{background:#fff;color:#15803d;border:none;padding:7px 13px;border-radius:8px;font-weight:800;font-size:12px;cursor:pointer}
 .ib-dismiss{background:rgba(255,255,255,.2);color:#fff;border:none;padding:7px 10px;border-radius:8px;font-size:12px;cursor:pointer}
-.err-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#14532d,#16a34a);padding:20px}
-.err-card{background:#fff;border-radius:18px;padding:28px;max-width:440px;width:100%;box-shadow:0 20px 40px rgba(0,0,0,.2)}
-.err-card h2{color:#dc2626;margin-bottom:10px;font-size:18px}
-.err-card p{font-size:13px;color:#374151;margin-bottom:10px;line-height:1.6}
+/* Screens */
 .ls{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#14532d 0%,#15803d 50%,#16a34a 100%);padding:20px 16px}
 .l-logo-wrap{width:80px;height:80px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:10px;box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .l-title{color:#fff;font-size:27px;font-weight:900;margin-bottom:3px;letter-spacing:-.5px}
@@ -67,52 +65,71 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0fdf4}
 .ti{font-size:16px}
 .tbb .ndot{position:absolute;top:6px;right:calc(50% - 14px);width:7px;height:7px;background:#dc2626;border-radius:50%}
 .tc{flex:1;overflow-y:auto;padding:13px}
-.mc{height:350px;border-radius:12px;overflow:hidden}
+/* Map */
+.mc{height:300px;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12)}
 #leaflet-map{height:100%;width:100%}
+/* Cards */
 .card{background:#fff;border-radius:13px;padding:15px;margin-bottom:11px;box-shadow:0 2px 8px rgba(21,128,61,.07);border:1px solid #f0fdf4}
 .ct{font-size:12px;font-weight:800;color:var(--dk);margin-bottom:11px;display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.3px}
 .badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:800}
 .bg2{background:#dcfce7;color:#15803d}.br2{background:#fee2e2;color:#dc2626}.by{background:#fef9c3;color:#b45309}.bb{background:#d1fae5;color:#15803d}
-.seat-bar{display:flex;gap:4px;margin:10px 0}
-.seat{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid #d1fae5}
+/* ETA Box */
+.eta-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid #86efac;border-radius:12px;padding:14px;display:flex;align-items:center;gap:14px;margin-bottom:11px}
+.eta-num{font-size:36px;font-weight:900;color:#15803d;line-height:1}
+.eta-label{font-size:11px;color:#4b7a5a;font-weight:600;margin-top:3px}
+.eta-detail{font-size:12px;color:#14532d;margin-top:4px}
+/* Active ride card */
+.ride-card{border-radius:13px;padding:15px;margin-bottom:11px;border:2px solid #86efac;background:linear-gradient(135deg,#f0fdf4,#fff)}
+.ride-card.pending{border-color:#d1fae5;background:#fff}
+.ride-driver-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.ride-drv-av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#14532d,#22c55e);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+/* Location picker */
+.lpick{display:flex;gap:10px;margin-bottom:11px}
+.lb2{flex:1;padding:12px 6px;border:2px solid #d1fae5;border-radius:11px;background:#fff;cursor:pointer;text-align:center;transition:all .2s}
+.lb2.sel{border-color:var(--p);background:#f0fdf4;box-shadow:0 0 0 3px rgba(21,128,61,.1)}
+.li{font-size:22px;display:block;margin-bottom:3px}.ll{font-size:11px;font-weight:700;color:var(--dk)}
+/* Passenger */
+.pax-list{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.pax-row{display:flex;align-items:center;gap:8px;padding:7px 10px;background:#f8fafc;border-radius:8px;border:1px solid #d1fae5}
+.pax-row.you{background:#dcfce7;border-color:#86efac}
+.pax-av{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#14532d,#22c55e);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0;font-weight:800}
+.pax-name{font-weight:600;color:#14532d;font-size:12px}
+.pax-co{font-size:11px;color:#4b7a5a}
+/* Seat bar */
+.seat-bar{display:flex;gap:4px;margin:8px 0 4px}
+.seat{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;border:2px solid #d1fae5}
 .seat.taken{background:#dcfce7;border-color:#86efac}.seat.you{background:#15803d;border-color:#15803d}.seat.empty{background:#f8fafc;border-color:#e2e8f0}
-.group-card{background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;padding:13px;margin-bottom:11px}
-.group-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.group-title{font-weight:800;color:#14532d;font-size:13px}
-.passenger-list{display:flex;flex-direction:column;gap:6px;margin-bottom:11px}
-.passenger-row{display:flex;align-items:center;gap:8px;padding:7px 10px;background:#fff;border-radius:8px;border:1px solid #d1fae5}
-.passenger-you{background:#dcfce7;border-color:#86efac}
-.passenger-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#14532d,#22c55e);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0;font-weight:700}
-.passenger-name{font-weight:600;color:#14532d;font-size:12px}
-.passenger-co{font-size:11px;color:#4b7a5a}
-.nc{background:#fff;border-radius:11px;padding:12px;margin-bottom:8px;border-left:4px solid var(--p);box-shadow:0 1px 5px rgba(0,0,0,.06);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.nc.park{border-left-color:#d97706}.nc.off2{border-left-color:#15803d}.nc.acc{border-left-color:#7c3aed}
-.nn{font-weight:700;color:var(--dk);font-size:13px}.nd{font-size:11px;color:var(--gr);margin-top:2px}
-.na{display:flex;gap:5px;flex-shrink:0}
+/* DC - driver card */
 .dc{display:flex;align-items:center;gap:11px;background:#fff;border-radius:11px;padding:11px 14px;margin-bottom:8px;box-shadow:0 1px 5px rgba(0,0,0,.06)}
 .dav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#14532d,#22c55e);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .di{flex:1}.dn{font-weight:700;color:var(--dk);font-size:13px}.dv{font-size:11px;color:var(--gr);margin-top:1px}
+/* Toggle */
 .toggle{position:relative;display:inline-block;width:40px;height:22px}
 .toggle input{opacity:0;width:0;height:0}
 .ts{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#cbd5e1;border-radius:22px;transition:.3s}
 .ts:before{position:absolute;content:"";height:16px;width:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
 input:checked+.ts{background:var(--g)}
 input:checked+.ts:before{transform:translateX(18px)}
-.lpick{display:flex;gap:10px;margin-bottom:13px}
-.lb2{flex:1;padding:12px 6px;border:2px solid #d1fae5;border-radius:11px;background:#fff;cursor:pointer;text-align:center;transition:all .2s}
-.lb2.sel{border-color:var(--p);background:#f0fdf4;box-shadow:0 0 0 3px rgba(21,128,61,.1)}
-.li{font-size:22px;display:block;margin-bottom:3px}.ll{font-size:11px;font-weight:700;color:var(--dk)}
+/* Stats */
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:11px}
 .sc{background:#fff;border-radius:13px;padding:13px;text-align:center;box-shadow:0 2px 8px rgba(21,128,61,.07);border:1px solid #d1fae5}
 .sv{font-size:24px;font-weight:900;color:var(--p)}.sl{font-size:11px;color:var(--gr);margin-top:2px;font-weight:600}
+/* Alerts */
 .ab{padding:10px 14px;border-radius:9px;margin-bottom:10px;font-size:13px;display:flex;align-items:center;gap:8px}
 .ai{background:#d1fae5;color:#14532d}.as2{background:#dcfce7;color:#166534}.aw{background:#fef3c7;color:#b45309}
-.es{text-align:center;padding:30px 16px;color:var(--gr)}
-.ei{font-size:40px;margin-bottom:8px}.es p{font-size:13px}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{background:#f0fdf4;padding:8px 10px;text-align:left;font-weight:800;color:var(--gr);border-bottom:1px solid #d1fae5}
-td{padding:8px 10px;border-bottom:1px solid #f0fdf4;color:var(--dk)}
-tr:hover td{background:#f0fdf4}
+/* History card */
+.ride-hist{border:1.5px solid #d1fae5;border-radius:12px;overflow:hidden;margin-bottom:10px}
+.ride-hist-head{padding:12px 14px;background:#f0fdf4;display:flex;align-items:center;justify-content:space-between}
+.ride-hist-body{padding:10px 14px;display:flex;flex-direction:column;gap:6px}
+.ride-hist-pax{display:flex;align-items:center;gap:8px;font-size:12px;color:#14532d}
+/* NC */
+.nc{background:#fff;border-radius:11px;padding:12px;margin-bottom:8px;border-left:4px solid var(--p);box-shadow:0 1px 5px rgba(0,0,0,.06);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.nc.park{border-left-color:#d97706}.nc.off2{border-left-color:#15803d}.nc.acc{border-left-color:#7c3aed}
+.nn{font-weight:700;color:var(--dk);font-size:13px}.nd{font-size:11px;color:var(--gr);margin-top:2px}
+.na{display:flex;gap:5px;flex-shrink:0}
+/* Group */
+.group-box{background:#f0fdf4;border:1.5px solid #86efac;border-radius:11px;padding:12px;margin-bottom:10px}
+/* Admin */
 .acct-row{border:1.5px solid #d1fae5;border-radius:10px;margin-bottom:8px;overflow:hidden}
 .acct-main{display:flex;align-items:center;padding:10px 12px;gap:9px}
 .acct-avatar{width:36px;height:36px;background:linear-gradient(135deg,#14532d,#22c55e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
@@ -122,10 +139,14 @@ tr:hover td{background:#f0fdf4}
 .pending-main{display:flex;align-items:center;padding:10px 12px;gap:9px}
 .ci{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:#f0fdf4;border-radius:8px;margin-bottom:6px;border:1px solid #d1fae5}
 .cn{font-weight:600;color:var(--dk);font-size:13px}
+.link-btn{background:none;border:none;color:var(--p);font-weight:700;cursor:pointer;font-size:13px;text-decoration:underline}
+.lock-badge{display:inline-flex;align-items:center;gap:5px;background:#dcfce7;color:#15803d;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:8px}
+/* Loading */
 .loading-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#14532d,#16a34a)}
 .loading-inner{text-align:center;color:#fff}
 .spin{font-size:48px;animation:sp 1.4s linear infinite;display:block;margin-bottom:12px}
 @keyframes sp{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+/* Signup */
 .signup-screen{min-height:100vh;display:flex;flex-direction:column;background:#f0fdf4}
 .signup-header{background:linear-gradient(135deg,#14532d,#15803d);padding:16px;display:flex;align-items:center;gap:12px;color:#fff}
 .signup-body{flex:1;padding:16px;overflow-y:auto;max-width:480px;margin:0 auto;width:100%}
@@ -137,8 +158,13 @@ tr:hover td{background:#f0fdf4}
 .step-line.done{background:#15803d}
 .success-screen{text-align:center;padding:40px 20px}
 .success-icon{font-size:64px;margin-bottom:16px;animation:pop .4s ease}
-.lock-badge{display:inline-flex;align-items:center;gap:5px;background:#dcfce7;color:#15803d;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:8px}
 @keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.15)}100%{transform:scale(1)}}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:#f0fdf4;padding:8px 10px;text-align:left;font-weight:800;color:var(--gr);border-bottom:1px solid #d1fae5}
+td{padding:8px 10px;border-bottom:1px solid #f0fdf4;color:var(--dk)}
+tr:hover td{background:#f0fdf4}
+.es{text-align:center;padding:30px 16px;color:var(--gr)}
+.ei{font-size:40px;margin-bottom:8px}.es p{font-size:13px}
 @media(max-width:400px){.tbb{font-size:10px;padding:10px 2px}.g2{grid-template-columns:1fr}}
 </style>
 </head>
@@ -149,163 +175,175 @@ tr:hover td{background:#f0fdf4}
 <div class="install-banner" id="installBanner">
   <div class="ib-icon">🌿</div>
   <div class="ib-text"><div class="ib-title">Install Greentouch Go</div><div class="ib-sub">Add to home screen for quick access</div></div>
-  <div class="ib-btns">
-    <button class="ib-install" onclick="doInstall()">Install</button>
-    <button class="ib-dismiss" onclick="dismissInstall()">✕</button>
-  </div>
+  <div class="ib-btns"><button class="ib-install" onclick="doInstall()">Install</button><button class="ib-dismiss" onclick="dismissInstall()">✕</button></div>
 </div>
 
 <script type="module">
 import { initializeApp }   from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
 import { getDatabase, ref as R, get, set, remove, onValue }
                            from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
-         updatePassword, EmailAuthProvider, reauthenticateWithCredential, signOut }
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut }
                            from "https://www.gstatic.com/firebasejs/12.14.0/firebase-auth.js";
 
-// ── FIREBASE CONFIG ───────────────────────
-const FC = {
-  apiKey: "AIzaSyCcCDcoAQi2vf0SPVUU283mwLN6vHbBHwY",
-  authDomain: "greentouch-go.firebaseapp.com",
-  databaseURL: "https://greentouch-go-default-rtdb.firebaseio.com",
-  projectId: "greentouch-go",
-  storageBucket: "greentouch-go.firebasestorage.app",
-  messagingSenderId: "54837107303",
-  appId: "1:54837107303:web:bc36efc222ad22696092c2",
-  measurementId: "G-4FP48EHRDV"
-};
+const FC={apiKey:"AIzaSyCcCDcoAQi2vf0SPVUU283mwLN6vHbBHwY",authDomain:"greentouch-go.firebaseapp.com",databaseURL:"https://greentouch-go-default-rtdb.firebaseio.com",projectId:"greentouch-go",storageBucket:"greentouch-go.firebasestorage.app",messagingSenderId:"54837107303",appId:"1:54837107303:web:bc36efc222ad22696092c2",measurementId:"G-4FP48EHRDV"};
+const FB_EMAIL=id=>`${id}@greentouchgo.app`;
+const MAX_SEATS=6;
+const AVG_MPS=25*1000/3600; // 25 km/h in m/s
+const ARRIVAL_RADIUS=150; // metres — auto-complete ride within this distance
 
-// Firebase Auth uses email format internally — loginId@greentouchgo.app
-// (no real email needed — Firebase accepts any valid format)
-const FB_EMAIL = id => `${id}@greentouchgo.app`;
-const MAX_SEATS = 6;
-
-// ── FIREBASE INIT ─────────────────────────
-let _db=null, _auth=null, _auth2=null; // _auth2 = secondary app for creating accounts
-
-function initFirebase() {
-  try {
-    const app  = initializeApp(FC);
-    const app2 = initializeApp(FC, 'sec'); // secondary instance
-    _db    = getDatabase(app);
-    _auth  = getAuth(app);
-    _auth2 = getAuth(app2);
-    return true;
-  } catch(e) {
-    document.getElementById('app').innerHTML = `
-    <div class="err-screen"><div class="err-card">
-      <h2>⚠️ Firebase Error</h2><p>${e.message}</p>
-    </div></div>`;
-    return false;
-  }
+let _db=null,_auth=null,_auth2=null;
+function initFirebase(){
+  try{const a=initializeApp(FC),b=initializeApp(FC,'sec');_db=getDatabase(a);_auth=getAuth(a);_auth2=getAuth(b);return true;}
+  catch(e){document.getElementById('app').innerHTML=`<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#14532d,#16a34a);padding:20px"><div style="background:#fff;border-radius:18px;padding:28px;max-width:400px"><h2 style="color:#dc2626;margin-bottom:10px">Firebase Error</h2><p style="font-size:13px">${e.message}</p></div></div>`;return false;}
 }
+async function seedDefaultAuth(){const d=[['user01','pass123'],['user02','pass123'],['drv01','drv123'],['drv02','drv123'],['drv03','drv123']];for(const[i,p]of d){try{await createUserWithEmailAndPassword(_auth2,FB_EMAIL(i),p);await signOut(_auth2);}catch(e){}}}
 
-// Silently create Firebase Auth accounts for default users on first run
-async function seedDefaultAuth() {
-  const defaults = [
-    ['user01','pass123'],['user02','pass123'],
-    ['drv01','drv123'],['drv02','drv123'],['drv03','drv123']
-  ];
-  for (const [id,pwd] of defaults) {
-    try {
-      await createUserWithEmailAndPassword(_auth2, FB_EMAIL(id), pwd);
-      await signOut(_auth2);
-    } catch(e) { /* auth/email-already-in-use = already done, ignore */ }
-  }
-}
-
-// ── DATABASE HELPERS ──────────────────────
-const PFX = 'gtgo/';
-function toArr(val){if(!val)return[];if(Array.isArray(val))return val.filter(Boolean);if(typeof val==='object')return Object.values(val).filter(Boolean);return[];}
+// ── DB HELPERS ────────────────────────────
+const PFX='gtgo/';
+function toArr(v){if(!v)return[];if(Array.isArray(v))return v.filter(Boolean);if(typeof v==='object')return Object.values(v).filter(Boolean);return[];}
 async function sGet(k){if(!_db)return null;try{const s=await get(R(_db,PFX+k));if(!s.exists())return null;const v=s.val();if(v&&typeof v==='object'&&!Array.isArray(v)){const ks=Object.keys(v);if(ks.length&&ks.every(ki=>!isNaN(parseInt(ki))))return Object.values(v);}return v;}catch(e){return null;}}
-async function sSet(k,v){if(_db)try{await set(R(_db,PFX+k),v);}catch(e){console.error(k,e);}}
-async function sDel(k){if(_db)try{await remove(R(_db,PFX+k));}catch(e){}}
+async function sSet(k,v){if(_db)try{await set(R(_db,PFX+k),v);}catch(e){}}
 const sessGet=k=>{try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;}};
 const sessSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 const sessDel=k=>{try{localStorage.removeItem(k);}catch(e){}};
 
 // ── DEFAULTS ──────────────────────────────
 const DEF_COS=['TechCorp Solutions','InfoSys India','DataWave Analytics','CloudNine Ltd','NexGen Systems'];
-// No passwords stored — Firebase Auth handles credentials
-const DEF_USERS=[
-  {id:'user01',name:'Arjun Nair',co:'TechCorp Solutions',mob:'9876543210',status:'active'},
-  {id:'user02',name:'Priya Menon',co:'InfoSys India',mob:'9876543211',status:'active'},
-];
-const DEF_DRVS=[
-  {id:'drv01',name:'Rajan Kumar',veh:'KL-07-AB-1234',online:false,st:'offline',lat:10.0042,lng:76.3618,trips:12},
-  {id:'drv02',name:'Suresh Nair',veh:'KL-07-CD-5678',online:false,st:'offline',lat:10.0058,lng:76.3637,trips:8},
-  {id:'drv03',name:'Pradeep Menon',veh:'KL-07-EF-9012',online:false,st:'offline',lat:10.0071,lng:76.3656,trips:15},
-];
+const DEF_USERS=[{id:'user01',name:'Arjun Nair',co:'TechCorp Solutions',mob:'9876543210',status:'active'},{id:'user02',name:'Priya Menon',co:'InfoSys India',mob:'9876543211',status:'active'}];
+const DEF_DRVS=[{id:'drv01',name:'Rajan Kumar',veh:'KL-07-AB-1234',online:false,st:'offline',lat:10.0042,lng:76.3618,trips:12},{id:'drv02',name:'Suresh Nair',veh:'KL-07-CD-5678',online:false,st:'offline',lat:10.0058,lng:76.3637,trips:8},{id:'drv03',name:'Pradeep Menon',veh:'KL-07-EF-9012',online:false,st:'offline',lat:10.0071,lng:76.3656,trips:15}];
 
 // ── STATE ─────────────────────────────────
-const ST={
-  view:'loading',role:'user',
-  users:[],drivers:[],companies:[],notifs:[],rides:[],
-  user:null,driver:null,
-  tab:'map',selLoc:null,editUId:null,editDId:null,
-  signupStep:1,showPwd:false,_sd:null
-};
-const PARK={lat:10.003944,lng:76.361403};
-const OFFC={lat:10.0099029,lng:76.3679895};
+const ST={view:'loading',role:'user',users:[],drivers:[],companies:[],notifs:[],rides:[],user:null,driver:null,tab:'home',selLoc:null,editUId:null,editDId:null,signupStep:1,showPwd:false,_sd:null};
+const PARK={lat:10.003944,lng:76.361403,name:'Parking Ground'};
+const OFFC={lat:10.0099029,lng:76.3679895,name:'Greentouch Spaces, SmartCity'};
 let MAP=null,installEvt=null,renderTimer=null;
-let driverMarkers={},watchId=null,_lastLat=null,_lastLng=null,_lastLocTime=0;
+let driverMarkers={},watchId=null,_lastLat=null,_lastLng=null,_lastLocTime=0,_autoCompleting=false;
 const LOC_THROTTLE=8000,LOC_MIN_DIST=15;
 
 const ts=()=>new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
 const uid=()=>'x'+Date.now()+Math.floor(Math.random()*999);
 const v=id=>(document.getElementById(id)?.value||'').trim();
 
+// ── ETA ───────────────────────────────────
+function getETA(driverId,pickupLoc){
+  const d=ST.drivers.find(x=>x.id===driverId);
+  if(!d||!d.lat||!d.lng) return null;
+  const dest=pickupLoc==='park'?PARK:OFFC;
+  if(d.st==='available'){
+    return Math.max(1,Math.ceil(calcDist(d.lat,d.lng,dest.lat,dest.lng)/AVG_MPS/60));
+  }
+  if(d.st==='busy'){
+    const n=ST.notifs.find(x=>x.did===driverId&&x.st==='acc');
+    if(n){
+      const rideDest=n.loc==='park'?OFFC:PARK;
+      const d1=calcDist(d.lat,d.lng,rideDest.lat,rideDest.lng);
+      const d2=calcDist(rideDest.lat,rideDest.lng,dest.lat,dest.lng);
+      return Math.max(2,Math.ceil((d1+d2)/AVG_MPS/60));
+    }
+  }
+  return null;
+}
+function getBestETA(pickupLoc){
+  const etas=ST.drivers.filter(d=>d.online).map(d=>getETA(d.id,pickupLoc)).filter(e=>e!==null);
+  return etas.length?Math.min(...etas):null;
+}
+
 // ── GPS ───────────────────────────────────
 function calcDist(a,b,c,d){const R=6371000,dl=(c-a)*Math.PI/180,dn=(d-b)*Math.PI/180,x=Math.sin(dl/2)**2+Math.cos(a*Math.PI/180)*Math.cos(c*Math.PI/180)*Math.sin(dn/2)**2;return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
-function drvIcon(d){const c=d.online?(d.st==='available'?'#15803d':'#d97706'):'#94a3b8';return L.divIcon({className:'',html:`<div style="background:${c};color:#fff;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:700;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.22);white-space:nowrap">🚗 ${d.veh.slice(-4)}</div>`,iconSize:[68,24],iconAnchor:[34,12]});}
-function startTracking(id){if(!navigator.geolocation)return;stopTracking();_lastLat=null;_lastLng=null;_lastLocTime=0;watchId=navigator.geolocation.watchPosition(pos=>{const now=Date.now(),{latitude:lat,longitude:lng}=pos.coords;if(now-_lastLocTime<LOC_THROTTLE)return;if(_lastLat!==null&&calcDist(_lastLat,_lastLng,lat,lng)<LOC_MIN_DIST)return;_lastLat=lat;_lastLng=lng;_lastLocTime=now;updateDriverLoc(id,lat,lng);},()=>{},{enableHighAccuracy:false,timeout:15000,maximumAge:8000});}
-function stopTracking(id){if(watchId!==null){navigator.geolocation.clearWatch(watchId);watchId=null;}if(id&&_db)set(R(_db,`gtgo/gtgo_loc/${id}`),null).catch(()=>{});}
-async function updateDriverLoc(id,lat,lng){const d=ST.drivers.find(x=>x.id===id);if(d){d.lat=lat;d.lng=lng;}if(_db)await set(R(_db,`gtgo/gtgo_loc/${id}`),{lat,lng});if(MAP&&driverMarkers[id]){driverMarkers[id].setLatLng([lat,lng]);if(d)driverMarkers[id].setIcon(drvIcon(d));}}
+function drvIcon(d){const c=d.online?(d.st==='available'?'#15803d':'#d97706'):'#94a3b8';return L.divIcon({className:'',html:`<div style="background:${c};color:#fff;border-radius:8px;padding:4px 9px;font-size:11px;font-weight:800;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);white-space:nowrap">🚗 ${d.veh.slice(-4)}</div>`,iconSize:[72,26],iconAnchor:[36,13]});}
+
+function startTracking(id){
+  if(!navigator.geolocation)return;
+  stopTracking();_lastLat=null;_lastLng=null;_lastLocTime=0;
+  watchId=navigator.geolocation.watchPosition(pos=>{
+    const now=Date.now(),{latitude:lat,longitude:lng}=pos.coords;
+    if(now-_lastLocTime<LOC_THROTTLE)return;
+    if(_lastLat!==null&&calcDist(_lastLat,_lastLng,lat,lng)<LOC_MIN_DIST)return;
+    _lastLat=lat;_lastLng=lng;_lastLocTime=now;
+    updateDriverLoc(id,lat,lng);
+  },()=>{},{enableHighAccuracy:false,timeout:15000,maximumAge:8000});
+}
+function stopTracking(id){
+  if(watchId!==null){navigator.geolocation.clearWatch(watchId);watchId=null;}
+  if(id&&_db)set(R(_db,`gtgo/gtgo_loc/${id}`),null).catch(()=>{});
+}
+
+async function updateDriverLoc(id,lat,lng){
+  const d=ST.drivers.find(x=>x.id===id);
+  if(d){d.lat=lat;d.lng=lng;}
+  if(_db)await set(R(_db,`gtgo/gtgo_loc/${id}`),{lat,lng});
+  if(MAP&&driverMarkers[id]){driverMarkers[id].setLatLng([lat,lng]);if(d)driverMarkers[id].setIcon(drvIcon(d));}
+
+  // Update live ETA + check for auto-complete
+  const an=ST.notifs.find(n=>n.did===id&&n.st==='acc');
+  if(an){
+    // Update ETA in Firebase so passengers see it live
+    const eta=getETA(id,an.loc);
+    if(eta!==null&&eta!==an.eta){an.eta=eta;await sSet('gtgo_notifs',ST.notifs);}
+    // Auto-complete: if within ARRIVAL_RADIUS of destination
+    if(!_autoCompleting&&ST.driver?.id===id){
+      const dest=an.loc==='park'?OFFC:PARK;
+      if(calcDist(lat,lng,dest.lat,dest.lng)<ARRIVAL_RADIUS){
+        await autoCompleteRide(an.id,id);
+      }
+    }
+  }
+}
+
+async function autoCompleteRide(notifId,driverId){
+  if(_autoCompleting)return;
+  _autoCompleting=true;
+  const n=ST.notifs.find(x=>x.id===notifId);
+  if(!n){_autoCompleting=false;return;}
+  const dname=ST.drivers.find(x=>x.id===driverId)?.name||'';
+  ST.rides.push({id:uid(),loc:n.loc,did:driverId,dname,time:ts(),passengers:n.passengers||[],auto:true});
+  ST.notifs=ST.notifs.filter(x=>x.id!==notifId);
+  const d=ST.drivers.find(x=>x.id===driverId);
+  if(d){d.st='available';d.trips=(d.trips||0)+1;}
+  if(ST.driver?.id===driverId)ST.driver.st='available';
+  await sSet('gtgo_notifs',ST.notifs);
+  await sSet('gtgo_rides',ST.rides);
+  await sSet('gtgo_drvs',ST.drivers);
+  _autoCompleting=false;
+  scheduleRender();
+}
 
 // ── REALTIME ──────────────────────────────
 function setupRealtime(){
   if(!_db)return;
-  const listen=(key,stKey,extra)=>onValue(R(_db,PFX+key),snap=>{const d=toArr(snap.val());if(JSON.stringify(d)!==JSON.stringify(ST[stKey])){ST[stKey]=d;if(extra)extra(d);scheduleRender();}});
+  const listen=(key,stKey,extra)=>onValue(R(_db,PFX+key),snap=>{const d=toArr(snap.val());if(JSON.stringify(d)!==JSON.stringify(ST[stKey])){ST[stKey]=d;if(extra)extra();scheduleRender();}});
   listen('gtgo_notifs','notifs');
   listen('gtgo_rides','rides');
   listen('gtgo_users','users',()=>{if(ST.user){const u=ST.users.find(x=>x.id===ST.user.id);if(u)ST.user=u;}});
   listen('gtgo_drvs','drivers',()=>{if(ST.driver){const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d)ST.driver={...d};}});
-  onValue(R(_db,'gtgo/gtgo_loc'),snap=>{const locs=snap.val()||{};Object.entries(locs).forEach(([id,loc])=>{if(!loc)return;const d=ST.drivers.find(x=>x.id===id);if(d&&(d.lat!==loc.lat||d.lng!==loc.lng)){d.lat=loc.lat;d.lng=loc.lng;if(MAP&&driverMarkers[id])driverMarkers[id].setLatLng([loc.lat,loc.lng]);}});});
+  onValue(R(_db,'gtgo/gtgo_loc'),snap=>{
+    const locs=snap.val()||{};
+    Object.entries(locs).forEach(([id,loc])=>{if(!loc)return;const d=ST.drivers.find(x=>x.id===id);if(d&&(d.lat!==loc.lat||d.lng!==loc.lng)){d.lat=loc.lat;d.lng=loc.lng;if(MAP&&driverMarkers[id])driverMarkers[id].setLatLng([loc.lat,loc.lng]);}});
+  });
 }
-function scheduleRender(){if(ST.view==='loading')return;clearTimeout(renderTimer);renderTimer=setTimeout(()=>{const onMap=(ST.view==='user'&&ST.tab==='map')||(ST.view==='driver'&&ST.tab==='map')||(ST.view==='admin'&&ST.tab==='dash');if(onMap)softUpdate();else go();},350);}
+function scheduleRender(){if(ST.view==='loading')return;clearTimeout(renderTimer);renderTimer=setTimeout(()=>{const onMap=(ST.view==='user'&&ST.tab==='home')||(ST.view==='driver'&&ST.tab==='map')||(ST.view==='admin'&&ST.tab==='dash');if(onMap)softUpdate();else go();},350);}
 function softUpdate(){const tc=document.querySelector('.tc');if(!tc){go();return;}const tmp=document.createElement('div');tmp.innerHTML=`<div class="tc">${renderTabContent()}</div>`;const n=tmp.querySelector('.tc');if(n)tc.innerHTML=n.innerHTML;}
 
 // ── PWA ───────────────────────────────────
-function setupPWA(){const svg=`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2315803d'/><text y='.9em' font-size='80' x='10'>🌿</text></svg>`;try{const mf={name:'Greentouch Go',short_name:'Greentouch Go',start_url:'.',display:'standalone',background_color:'#14532d',theme_color:'#15803d',icons:[{src:svg,sizes:'192x192',type:'image/svg+xml'},{src:svg,sizes:'512x512',type:'image/svg+xml',purpose:'maskable'}]};const ml=document.createElement('link');ml.rel='manifest';ml.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/manifest+json'}));document.head.appendChild(ml);const al=document.createElement('link');al.rel='apple-touch-icon';al.href=svg;document.head.appendChild(al);}catch(e){}try{const sw=`const C='gtgo-v4';self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(clients.claim()));self.addEventListener('fetch',e=>{if(e.request.url.includes('openstreetmap')||e.request.url.includes('cdnjs'))e.respondWith(caches.open(C).then(c=>c.match(e.request).then(r=>r||(fetch(e.request).then(res=>{c.put(e.request,res.clone());return res})))));});`;navigator.serviceWorker?.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'})),{scope:'./'}).catch(()=>{});}catch(e){}window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvt=e;setTimeout(()=>document.getElementById('installBanner')?.classList.add('show'),3000);});window.addEventListener('appinstalled',dismissInstall);const ios=/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());if(ios&&!window.matchMedia('(display-mode:standalone)').matches){setTimeout(()=>{const b=document.getElementById('installBanner');if(b){b.querySelector('.ib-sub').textContent='Tap Share → "Add to Home Screen"';b.querySelector('.ib-install').textContent='Got it';b.querySelector('.ib-install').onclick=dismissInstall;b.classList.add('show');}},3000);};}
+function setupPWA(){const svg=`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2315803d'/><text y='.9em' font-size='80' x='10'>🌿</text></svg>`;try{const mf={name:'Greentouch Go',short_name:'Greentouch Go',start_url:'.',display:'standalone',background_color:'#14532d',theme_color:'#15803d',icons:[{src:svg,sizes:'192x192',type:'image/svg+xml'},{src:svg,sizes:'512x512',type:'image/svg+xml',purpose:'maskable'}]};const ml=document.createElement('link');ml.rel='manifest';ml.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/manifest+json'}));document.head.appendChild(ml);const al=document.createElement('link');al.rel='apple-touch-icon';al.href=svg;document.head.appendChild(al);}catch(e){}try{const sw=`const C='gtgo-v5';self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(clients.claim()));self.addEventListener('fetch',e=>{if(e.request.url.includes('carto')||e.request.url.includes('cdnjs'))e.respondWith(caches.open(C).then(c=>c.match(e.request).then(r=>r||(fetch(e.request).then(res=>{c.put(e.request,res.clone());return res})))));});`;navigator.serviceWorker?.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'})),{scope:'./'}).catch(()=>{});}catch(e){}window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvt=e;setTimeout(()=>document.getElementById('installBanner')?.classList.add('show'),3000);});window.addEventListener('appinstalled',dismissInstall);const ios=/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());if(ios&&!window.matchMedia('(display-mode:standalone)').matches){setTimeout(()=>{const b=document.getElementById('installBanner');if(b){b.querySelector('.ib-sub').textContent='Tap Share → "Add to Home Screen"';b.querySelector('.ib-install').textContent='Got it';b.querySelector('.ib-install').onclick=dismissInstall;b.classList.add('show');}},3000);};}
 function doInstall(){if(installEvt){installEvt.prompt();installEvt.userChoice.then(dismissInstall);}}
 function dismissInstall(){document.getElementById('installBanner')?.classList.remove('show');}
 
 // ── INIT ──────────────────────────────────
 async function init(){
-  setupPWA();
-  if(!initFirebase())return;
-
-  // Seed default Firebase Auth accounts (silent — skips if already done)
+  setupPWA();if(!initFirebase())return;
   await seedDefaultAuth();
-
-  // Load shared data
   let u=await sGet('gtgo_users');if(!u||!u.length){u=DEF_USERS.map(x=>({...x}));await sSet('gtgo_users',u);}ST.users=u;
   let d=await sGet('gtgo_drvs');if(!d||!d.length){d=DEF_DRVS.map(x=>({...x}));await sSet('gtgo_drvs',d);}ST.drivers=d;
   let c=await sGet('gtgo_cos');if(!c||!c.length){c=[...DEF_COS];await sSet('gtgo_cos',c);}ST.companies=c;
   ST.notifs=(await sGet('gtgo_notifs'))||[];
   ST.rides=(await sGet('gtgo_rides'))||[];
-
-  // Restore session — Firebase Auth persists login automatically
   const sess=sessGet('gtgo_sess');
   if(sess){
     if(sess.role==='admin'){ST.view='admin';ST.tab='dash';}
-    else if(sess.role==='user'&&_auth.currentUser){
-      const usr=ST.users.find(x=>x.id===sess.id&&x.status==='active');
-      if(usr){ST.user=usr;ST.view='user';ST.tab='map';}else sessDel('gtgo_sess');
-    } else if(sess.role==='driver'&&_auth.currentUser){
-      const drv=ST.drivers.find(x=>x.id===sess.id);
-      if(drv){ST.driver={...drv};ST.view='driver';ST.tab='map';}else sessDel('gtgo_sess');
-    } else if(sess.role!=='admin') sessDel('gtgo_sess');
+    else if(sess.role==='user'&&_auth.currentUser){const usr=ST.users.find(x=>x.id===sess.id&&x.status==='active');if(usr){ST.user=usr;ST.view='user';ST.tab='home';}else sessDel('gtgo_sess');}
+    else if(sess.role==='driver'&&_auth.currentUser){const drv=ST.drivers.find(x=>x.id===sess.id);if(drv){ST.driver={...drv};ST.view='driver';ST.tab='map';}else sessDel('gtgo_sess');}
+    else if(sess.role!=='admin')sessDel('gtgo_sess');
   }
   if(ST.view==='loading')ST.view='login';
   go();setupRealtime();
@@ -313,11 +351,34 @@ async function init(){
 
 function go(){document.getElementById('app').innerHTML=render();if(MAP){MAP.remove();MAP=null;}setTimeout(initMap,90);}
 function render(){if(ST.view==='login')return rLogin();if(ST.view==='signup')return rSignup();if(ST.view==='user')return rShell('user',`👤 ${ST.user?.name}`,ST.user?.co);if(ST.view==='driver')return rShell('driver',`🚗 ${ST.driver?.name}`,ST.driver?.veh);if(ST.view==='admin')return rShell('admin','🛡️ Admin','Management Panel');return '';}
-function rShell(role,title,sub){const pC=ST.users.filter(u=>u.status==='pending').length,pN=ST.notifs.filter(n=>n.st==='pending').length;const tabs=role==='user'?[['map','🗺️','Map'],['req','🔔','Notify'],['hist','📋','History']]:role==='driver'?[['map','🗺️','Map'],['reqs','🔔',`Alerts${pN?' ('+pN+')':''}`],['stat','⚙️','Status']]:[['dash','📊','Dash'],['users','👤',`Users${pC?' ('+pC+')':''}`],['drvs','🚗','Drivers'],['cos','🏢','Companies'],['rides','📋','Rides']];return `<div class="ac">${hdr(title,sub)}<div class="tb">${tabs.map(([t,i,l])=>`<button class="tbb ${ST.tab===t?'act':''}" onclick="setTab('${t}')"><span class="ti">${i}</span>${l}${role==='admin'&&t==='users'&&pC?`<span class="ndot"></span>`:''}</button>`).join('')}</div><div class="tc">${renderTabContent()}</div></div>`;}
+function rShell(role,title,sub){
+  const pC=ST.users.filter(u=>u.status==='pending').length,pN=ST.notifs.filter(n=>n.st==='pending').length;
+  const tabs=role==='user'?[['home','🏠','Home'],['hist','📋','My Rides']]:role==='driver'?[['map','🗺️','Map'],['reqs','🔔',`Alerts${pN?' ('+pN+')':''}`],['stat','⚙️','Status']]:[['dash','📊','Dash'],['users','👤',`Users${pC?' ('+pC+')':''}`],['drvs','🚗','Drivers'],['cos','🏢','Companies'],['rides','📋','Rides']];
+  return `<div class="ac">${hdr(title,sub)}<div class="tb">${tabs.map(([t,i,l])=>`<button class="tbb ${ST.tab===t?'act':''}" onclick="setTab('${t}')"><span class="ti">${i}</span>${l}${role==='admin'&&t==='users'&&pC?`<span class="ndot"></span>`:''}</button>`).join('')}</div><div class="tc">${renderTabContent()}</div></div>`;
+}
 function renderTabContent(){if(ST.view==='user')return rUserTab();if(ST.view==='driver')return rDriverTab();if(ST.view==='admin')return rAdminTab();return '';}
 
-// ── MAP ───────────────────────────────────
-function initMap(){const el=document.getElementById('leaflet-map');if(!el)return;if(MAP){MAP.remove();MAP=null;}driverMarkers={};MAP=L.map('leaflet-map').setView([10.0069,76.3647],14);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(MAP);const mk=(e,bg)=>L.divIcon({className:'',html:`<div style="background:${bg};color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:17px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)">${e}</div>`,iconSize:[36,36],iconAnchor:[18,18]});L.marker([PARK.lat,PARK.lng],{icon:mk('🅿️','#d97706')}).addTo(MAP).bindPopup('<b>🅿️ Parking Ground</b><br>Smart City, Kakkanad');L.marker([OFFC.lat,OFFC.lng],{icon:mk('🏢','#15803d')}).addTo(MAP).bindPopup('<b>🏢 Greentouch Spaces</b><br>Smart City, Kakkanad');L.polyline([[PARK.lat,PARK.lng],[OFFC.lat,OFFC.lng]],{color:'#22c55e',weight:4,opacity:.6,dashArray:'8,6'}).addTo(MAP);ST.drivers.forEach(d=>{const m=L.marker([d.lat,d.lng],{icon:drvIcon(d)}).addTo(MAP);m.bindPopup(`<b>${d.name}</b><br>${d.veh}<br>${d.st}`);driverMarkers[d.id]=m;});if(ST.view==='driver'&&ST.driver){const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d)MAP.setView([d.lat,d.lng],15);}}
+// ── MAP (CartoDB Voyager — much better tiles) ──
+function initMap(){
+  const el=document.getElementById('leaflet-map');if(!el)return;
+  if(MAP){MAP.remove();MAP=null;}driverMarkers={};
+  MAP=L.map('leaflet-map',{zoomControl:true,attributionControl:true}).setView([10.0069,76.3647],15);
+  // CartoDB Voyager — clean, colorful, professional
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains:'abcd',maxZoom:19
+  }).addTo(MAP);
+
+  // Parking marker
+  L.marker([PARK.lat,PARK.lng],{icon:L.divIcon({className:'',html:`<div style="background:#d97706;color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:20px;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.3)">🅿️</div>`,iconSize:[40,40],iconAnchor:[20,20]})}).addTo(MAP).bindPopup(`<b>🅿️ ${PARK.name}</b><br>Cab Pickup Point`);
+  // Office marker
+  L.marker([OFFC.lat,OFFC.lng],{icon:L.divIcon({className:'',html:`<div style="background:#15803d;color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:20px;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.3)">🏢</div>`,iconSize:[40,40],iconAnchor:[20,20]})}).addTo(MAP).bindPopup(`<b>🏢 ${OFFC.name}</b>`);
+  // Route line
+  L.polyline([[PARK.lat,PARK.lng],[OFFC.lat,OFFC.lng]],{color:'#22c55e',weight:4,opacity:.7,dashArray:'10,8'}).addTo(MAP);
+  // Driver markers
+  ST.drivers.forEach(d=>{const m=L.marker([d.lat,d.lng],{icon:drvIcon(d)}).addTo(MAP);m.bindPopup(`<b>${d.name}</b><br>${d.veh}<br><span style="color:${d.online?'#15803d':'#94a3b8'}">${d.online?'🟢 '+d.st:'🔴 Offline'}</span>`);driverMarkers[d.id]=m;});
+  if(ST.view==='driver'&&ST.driver){const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d)MAP.setView([d.lat,d.lng],16);}
+}
 
 // ── LOGIN ─────────────────────────────────
 function rLogin(){
@@ -334,169 +395,222 @@ function rLogin(){
       </div>
       ${!isAdm?`<div class="fg"><label>Login ID</label><input id="lid" placeholder="Your login ID" autocomplete="username"></div>`:''}
       <div class="fg"><label>${isAdm?'Admin Password':'Password'}</label>
-        <div class="pw-wrap">
-          <input id="lpwd" type="${ST.showPwd?'text':'password'}" placeholder="${isAdm?'Admin password':'Your password'}" autocomplete="current-password">
-          <button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button>
-        </div>
+        <div class="pw-wrap"><input id="lpwd" type="${ST.showPwd?'text':'password'}" placeholder="${isAdm?'Admin password':'Your password'}" autocomplete="current-password">
+        <button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button></div>
       </div>
       <button class="btn bp" onclick="doLogin()">Login →</button>
-      ${!isAdm?`<div class="or-divider">or</div>
-        <button class="btn bo" onclick="goSignup()">✍️ New User? Sign Up</button>
-        <div class="hint">🔑 Or contact your admin for login credentials</div>`
-      :`<div class="hint" style="margin-top:10px">Demo password: <b>admin123</b><br><span style="font-size:11px;color:#4b7a5a">🔒 Secured by Firebase Auth</span></div>`}
+      ${!isAdm?`<div class="or-divider">or</div><button class="btn bo" onclick="goSignup()">✍️ New User? Sign Up</button><div class="hint">🔑 Or contact your admin for credentials</div>`
+      :`<div class="hint" style="margin-top:10px">Demo: <b>admin123</b> &nbsp;|&nbsp; 🔒 Firebase Auth</div>`}
     </div>
   </div>`;
 }
 
 async function doLogin(){
-  const id=v('lid'),pwd=v('lpwd');
-  if(!pwd)return alert('Enter your password');
-
-  // Admin: simple password check (no Firebase Auth needed for admin)
-  if(ST.role==='admin'){
-    if(pwd!=='admin123')return alert('Invalid admin password');
-    ST.view='admin';ST.tab='dash';sessSet('gtgo_sess',{role:'admin',id:'admin'});go();return;
-  }
-
-  // Staff & Driver: authenticate via Firebase Auth
-  try{
-    await signInWithEmailAndPassword(_auth,FB_EMAIL(id),pwd);
-  }catch(e){
-    return alert('Invalid Login ID or password');
-  }
-
+  const id=v('lid'),pwd=v('lpwd');if(!pwd)return alert('Enter your password');
+  if(ST.role==='admin'){if(pwd!=='admin123')return alert('Invalid admin password');ST.view='admin';ST.tab='dash';sessSet('gtgo_sess',{role:'admin',id:'admin'});go();return;}
+  try{await signInWithEmailAndPassword(_auth,FB_EMAIL(id),pwd);}catch(e){return alert('Invalid Login ID or password');}
   if(ST.role==='user'){
     const fresh=await sGet('gtgo_users');if(fresh)ST.users=fresh;
     const u=ST.users.find(x=>x.id===id);
     if(!u){await signOut(_auth);return alert('Account not found. Contact admin.');}
-    if(u.status==='pending'){await signOut(_auth);return alert('⏳ Your account is awaiting admin approval.');}
-    if(u.status==='rejected'){await signOut(_auth);return alert('❌ Your account was rejected. Contact admin.');}
-    ST.user=u;ST.view='user';ST.tab='map';sessSet('gtgo_sess',{role:'user',id:u.id});go();
+    if(u.status==='pending'){await signOut(_auth);return alert('⏳ Account awaiting admin approval.');}
+    if(u.status==='rejected'){await signOut(_auth);return alert('❌ Account rejected. Contact admin.');}
+    ST.user=u;ST.view='user';ST.tab='home';sessSet('gtgo_sess',{role:'user',id:u.id});go();
   }else{
     const fresh=await sGet('gtgo_drvs');if(fresh)ST.drivers=fresh;
     const d=ST.drivers.find(x=>x.id===id);
-    if(!d){await signOut(_auth);return alert('Driver account not found. Contact admin.');}
+    if(!d){await signOut(_auth);return alert('Driver account not found.');}
     ST.driver={...d};ST.view='driver';ST.tab='map';sessSet('gtgo_sess',{role:'driver',id:d.id});go();
   }
 }
-
 function goSignup(){ST.view='signup';ST.signupStep=1;go();}
 
 // ── SIGNUP ────────────────────────────────
 function rSignup(){
   const s=ST.signupStep;
   return `<div class="signup-screen">
-    <div class="signup-header">
-      <button onclick="ST.view='login';go()" style="background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">←</button>
-      <div><div style="font-weight:800;font-size:16px">🌿 Create Account</div><div style="font-size:11px;opacity:.7">Staff Signup · Secured by Firebase Auth</div></div>
-    </div>
+    <div class="signup-header"><button onclick="ST.view='login';go()" style="background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">←</button><div><div style="font-weight:800;font-size:16px">🌿 Create Account</div><div style="font-size:11px;opacity:.7">Secured by Firebase Auth</div></div></div>
     <div class="signup-body">
-      <div class="step-indicator">
-        <div class="step-dot ${s>1?'done':s===1?'act':''}">${s>1?'✓':'1'}</div>
-        <div class="step-line ${s>1?'done':''}"></div>
-        <div class="step-dot ${s>2?'done':s===2?'act':''}">${s>2?'✓':'2'}</div>
-        <div class="step-line ${s>2?'done':''}"></div>
-        <div class="step-dot ${s===3?'act':''}">3</div>
-      </div>
-      ${s===1?`<div class="card"><div class="ct">👤 Personal Info</div>
-        <div class="fg"><label>Full Name</label><input id="s-nm" placeholder="Your full name"></div>
-        <div class="fg"><label>Company</label><select id="s-co"><option value="">Select company</option>${ST.companies.map(c=>`<option>${c}</option>`).join('')}</select></div>
-        <div class="fg"><label>Mobile</label><input id="s-mb" type="tel" placeholder="+91 XXXXX XXXXX"></div>
-        <button class="btn bp" onclick="signupStep1()">Next →</button></div>`:''}
-      ${s===2?`<div class="card"><div class="ct">🔐 Credentials <span class="lock-badge">🔒 Secured by Firebase</span></div>
-        <div class="fg"><label>Choose Login ID</label><input id="s-id" placeholder="e.g. john.smith (no spaces)"></div>
-        <div class="fg"><label>Password</label>
-          <div class="pw-wrap"><input id="s-pwd" type="${ST.showPwd?'text':'password'}" placeholder="Min. 6 characters">
-          <button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button></div>
-        </div>
-        <div class="fg"><label>Confirm Password</label><input id="s-pwd2" type="password" placeholder="Re-enter password"></div>
-        <div class="hint-green">🔒 Your password is stored securely by Firebase — never visible in the database</div>
-        <br>
-        <button class="btn bp" onclick="signupStep2()" style="margin-bottom:10px">Submit →</button>
-        <button class="btn bgray" onclick="ST.signupStep=1;go()">← Back</button></div>`:''}
-      ${s===3?`<div class="success-screen">
-        <div class="success-icon">✅</div>
-        <div style="font-size:20px;font-weight:900;color:#14532d;margin-bottom:8px">Request Submitted!</div>
-        <div style="font-size:14px;color:#4b7a5a;margin-bottom:20px;line-height:1.6">Your Firebase account has been created.<br>Login will be enabled once admin approves.</div>
-        <button class="btn bp" onclick="ST.view='login';ST.role='user';go()">Go to Login</button>
-      </div>`:''}
+      <div class="step-indicator"><div class="step-dot ${s>1?'done':s===1?'act':''}">${s>1?'✓':'1'}</div><div class="step-line ${s>1?'done':''}"></div><div class="step-dot ${s>2?'done':s===2?'act':''}">${s>2?'✓':'2'}</div><div class="step-line ${s>2?'done':''}"></div><div class="step-dot ${s===3?'act':''}">3</div></div>
+      ${s===1?`<div class="card"><div class="ct">👤 Personal Info</div><div class="fg"><label>Full Name</label><input id="s-nm" placeholder="Your full name"></div><div class="fg"><label>Company</label><select id="s-co"><option value="">Select company</option>${ST.companies.map(c=>`<option>${c}</option>`).join('')}</select></div><div class="fg"><label>Mobile</label><input id="s-mb" type="tel" placeholder="+91 XXXXX XXXXX"></div><button class="btn bp" onclick="signupStep1()">Next →</button></div>`:''}
+      ${s===2?`<div class="card"><div class="ct">🔐 Credentials <span class="lock-badge">🔒 Firebase</span></div><div class="fg"><label>Login ID</label><input id="s-id" placeholder="e.g. john.smith"></div><div class="fg"><label>Password</label><div class="pw-wrap"><input id="s-pwd" type="${ST.showPwd?'text':'password'}" placeholder="Min. 6 characters"><button class="pw-eye" onclick="ST.showPwd=!ST.showPwd;go()">${ST.showPwd?'🙈':'👁️'}</button></div></div><div class="fg"><label>Confirm Password</label><input id="s-pwd2" type="password" placeholder="Re-enter password"></div><button class="btn bp" onclick="signupStep2()" style="margin-bottom:10px">Submit →</button><button class="btn bgray" onclick="ST.signupStep=1;go()">← Back</button></div>`:''}
+      ${s===3?`<div class="success-screen"><div class="success-icon">✅</div><div style="font-size:20px;font-weight:900;color:#14532d;margin-bottom:8px">Submitted!</div><div style="font-size:14px;color:#4b7a5a;margin-bottom:20px;line-height:1.6">Pending admin approval. You can login once approved.</div><button class="btn bp" onclick="ST.view='login';ST.role='user';go()">Go to Login</button></div>`:''}
     </div>
   </div>`;
 }
-
-async function signupStep1(){
-  const nm=v('s-nm'),co=v('s-co'),mb=v('s-mb');
-  if(!nm)return alert('Enter your full name');if(!co)return alert('Select company');
-  if(!mb||mb.replace(/\D/g,'').length<10)return alert('Enter a valid mobile number');
-  ST._sd={name:nm,co,mob:mb};ST.signupStep=2;go();
-}
-
+async function signupStep1(){const nm=v('s-nm'),co=v('s-co'),mb=v('s-mb');if(!nm)return alert('Enter your full name');if(!co)return alert('Select company');if(!mb||mb.replace(/\D/g,'').length<10)return alert('Enter valid mobile');ST._sd={name:nm,co,mob:mb};ST.signupStep=2;go();}
 async function signupStep2(){
   const id=v('s-id'),pwd=v('s-pwd'),pwd2=v('s-pwd2');
   if(!id||id.includes(' '))return alert('Login ID must have no spaces');
-  if(!pwd||pwd.length<6)return alert('Password must be at least 6 characters');
+  if(!pwd||pwd.length<6)return alert('Password min. 6 characters');
   if(pwd!==pwd2)return alert('Passwords do not match');
-
-  // Check if login ID already taken in DB
   const fresh=await sGet('gtgo_users');if(fresh)ST.users=fresh;
-  if(ST.users.find(u=>u.id===id))return alert('This Login ID is already taken');
-
-  // Create Firebase Auth account (no password stored in DB!)
-  try{
-    await createUserWithEmailAndPassword(_auth,FB_EMAIL(id),pwd);
-    await signOut(_auth); // sign out — account is pending, can't use yet
-  }catch(e){
-    if(e.code==='auth/email-already-in-use')return alert('This Login ID is already registered');
-    return alert('Error creating account: '+e.message);
-  }
-
-  // Store user profile (no password)
+  if(ST.users.find(u=>u.id===id))return alert('Login ID already taken');
+  try{await createUserWithEmailAndPassword(_auth,FB_EMAIL(id),pwd);await signOut(_auth);}catch(e){if(e.code==='auth/email-already-in-use')return alert('Login ID already registered');return alert('Error: '+e.message);}
   ST.users.push({id,name:ST._sd.name,co:ST._sd.co,mob:ST._sd.mob,status:'pending',signupTime:ts()});
-  await sSet('gtgo_users',ST.users);
-  ST._sd={...ST._sd,id};ST.signupStep=3;go();
+  await sSet('gtgo_users',ST.users);ST.signupStep=3;go();
 }
-
-async function logout(){
-  if(ST.driver)stopTracking(ST.driver.id);
-  if(_auth?.currentUser)await signOut(_auth);
-  sessDel('gtgo_sess');
-  Object.assign(ST,{view:'login',user:null,driver:null,tab:'map',selLoc:null,editUId:null,editDId:null,showPwd:false});go();
-}
+async function logout(){if(ST.driver)stopTracking(ST.driver.id);if(_auth?.currentUser)await signOut(_auth);sessDel('gtgo_sess');Object.assign(ST,{view:'login',user:null,driver:null,tab:'home',selLoc:null,editUId:null,editDId:null,showPwd:false});go();}
 function setTab(t){ST.tab=t;ST.editUId=null;ST.editDId=null;go();}
 
-// ── SEAT / PASSENGER HELPERS ──────────────
-function seatBar(passengers,myUid){let h='<div class="seat-bar">';for(let i=0;i<MAX_SEATS;i++){const p=passengers[i];if(!p)h+=`<div class="seat empty">💺</div>`;else if(p.uid===myUid)h+=`<div class="seat you" title="You">👤</div>`;else h+=`<div class="seat taken" title="${p.uname}">👤</div>`;}h+=`</div><div style="font-size:11px;color:#4b7a5a;margin-top:2px">${passengers.length}/${MAX_SEATS} seats · ${MAX_SEATS-passengers.length} remaining</div>`;return h;}
-function passengerList(passengers,myUid){return passengers.map(p=>`<div class="passenger-row ${p.uid===myUid?'passenger-you':''}"><div class="passenger-avatar">${p.uname.charAt(0)}</div><div><div class="passenger-name">${p.uname}${p.uid===myUid?' <span style="font-size:10px;color:#15803d;font-weight:700">(You)</span>':''}</div><div class="passenger-co">${p.co}</div></div></div>`).join('');}
+// ── HELPERS ───────────────────────────────
+function paxList(pax,myUid){return pax.map(p=>`<div class="pax-row ${p.uid===myUid?'you':''}"><div class="pax-av">${p.uname.charAt(0)}</div><div><div class="pax-name">${p.uname}${p.uid===myUid?' <span style="font-size:10px;color:#15803d">(You)</span>':''}</div><div class="pax-co">${p.co}</div></div></div>`).join('');}
+function seatBar(pax,myUid){let h='<div class="seat-bar">';for(let i=0;i<MAX_SEATS;i++){const p=pax[i];h+=`<div class="seat ${!p?'empty':p.uid===myUid?'you':'taken'}">${p?'👤':'💺'}</div>`;}return h+`</div><div style="font-size:11px;color:#4b7a5a">${pax.length}/${MAX_SEATS} seats · ${MAX_SEATS-pax.length} free</div>`;}
 
 // ── USER TABS ─────────────────────────────
 function rUserTab(){
-  if(ST.tab==='map'){const on=ST.drivers.filter(d=>d.online);return `<div class="card" style="padding:9px"><div class="mc"><div id="leaflet-map"></div></div></div><div class="card"><div class="ct">🚗 Cabs (${on.length} online)</div>${on.length?on.map(d=>`<div class="dc"><div class="dav">🚗</div><div class="di"><div class="dn">${d.name}</div><div class="dv">${d.veh}</div></div><span class="badge ${d.st==='available'?'bg2':'by'}">${d.st==='available'?'Available':'Busy'}</span></div>`).join(''):'<div class="es"><div class="ei">🚫</div><p>No cabs online right now</p></div>'}</div>`;}
-
-  if(ST.tab==='req'){
+  if(ST.tab==='home'){
     const mine=ST.notifs.find(n=>n.st!=='done'&&(n.passengers||[]).find(p=>p.uid===ST.user.id));
-    if(mine){const drv=ST.drivers.find(d=>d.id===mine.did),pax=mine.passengers||[];return `<div class="ab ${mine.st==='acc'?'as2':'ai'}">${mine.st==='acc'?`✅ <b>${drv?.name}</b> is on the way!`:'⏳ Waiting for a driver to accept...'}</div><div class="card"><div class="ct">🔔 Your Ride · ${mine.loc==='park'?'🅿️ Parking':'🏢 Office'}</div>${seatBar(pax,ST.user.id)}<div class="passenger-list" style="margin-top:10px">${passengerList(pax,ST.user.id)}</div>${mine.st==='acc'&&drv?`<div class="ab as2" style="margin-bottom:10px">🚗 <b>${drv.name}</b> · ${drv.veh}</div>`:''}<div style="font-size:12px;color:var(--gr);margin-bottom:10px">Requested ${mine.time}</div><button class="btn br bsm" onclick="leaveRide('${mine.id}')">✕ Leave Ride</button></div>`;}
-    if(ST.selLoc){const existing=ST.notifs.find(n=>n.st==='pending'&&n.loc===ST.selLoc&&(n.passengers||[]).length<MAX_SEATS);const locPicker=`<div class="lpick"><button class="lb2 ${ST.selLoc==='park'?'sel':''}" onclick="ST.selLoc='park';go()"><span class="li">🅿️</span><span class="ll">Parking Ground</span></button><button class="lb2 ${ST.selLoc==='off'?'sel':''}" onclick="ST.selLoc='off';go()"><span class="li">🏢</span><span class="ll">Office</span></button></div>`;if(existing){const pax=existing.passengers||[];return `<div class="card"><div class="ct">🔔 Notify Driver</div><p style="font-size:13px;color:var(--gr);margin-bottom:12px">Where are you waiting?</p>${locPicker}</div><div class="group-card"><div class="group-header"><div class="group-title">🚗 Group already waiting here</div><span class="badge bg2">${pax.length}/${MAX_SEATS} seats</span></div>${seatBar(pax,null)}<div class="passenger-list" style="margin-top:10px">${passengerList(pax,null)}</div><div style="display:flex;gap:8px;margin-top:4px"><button class="btn bp" style="flex:2" onclick="joinRide('${existing.id}')">🤝 Join this ride</button><button class="btn bgray" style="flex:1" onclick="createRide()">+ Go alone</button></div></div>`;}return `<div class="card"><div class="ct">🔔 Notify Driver</div><p style="font-size:13px;color:var(--gr);margin-bottom:12px">Where are you waiting?</p>${locPicker}<button class="btn bp" onclick="createRide()">🔔 Notify Driver</button></div>`;}
-    return `<div class="card"><div class="ct">🔔 Notify Driver</div><p style="font-size:13px;color:var(--gr);margin-bottom:12px">Where are you waiting?</p><div class="lpick"><button class="lb2" onclick="ST.selLoc='park';go()"><span class="li">🅿️</span><span class="ll">Parking Ground</span></button><button class="lb2" onclick="ST.selLoc='off';go()"><span class="li">🏢</span><span class="ll">Office</span></button></div><button class="btn bp" disabled style="opacity:.5;cursor:not-allowed">🔔 Notify Driver</button></div><div class="card" style="background:#f0fdf4;border:1px solid #bbf7d0"><div style="font-size:13px;color:#14532d"><b>ℹ️ How it works</b><br>1. Pick your waiting spot<br>2. Join an existing group or start new<br>3. Cab holds up to ${MAX_SEATS} passengers</div></div>`;
+    const drv=mine?ST.drivers.find(d=>d.id===mine.did):null;
+    const eta=mine?(mine.eta||getETA(mine.did,mine.loc)||getBestETA(mine.loc)):null;
+    const onCabs=ST.drivers.filter(d=>d.online);
+
+    // ── Active ride widget ──
+    let rideWidget='';
+    if(mine){
+      rideWidget=`<div class="ride-card ${mine.st==='pending'?'pending':''}">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <div style="font-weight:800;color:${mine.st==='acc'?'#15803d':'#4b7a5a'};font-size:13px">
+            ${mine.st==='acc'?'🚗 Driver on the way':'⏳ Searching for driver...'}
+          </div>
+          <button class="btn br bsm" onclick="leaveRide('${mine.id}')">✕ Cancel</button>
+        </div>
+        ${eta?`<div class="eta-box">
+          <div><div class="eta-num">${eta}</div><div class="eta-label">min ETA</div></div>
+          <div><div class="eta-detail"><b>Waiting at:</b> ${mine.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div>
+          ${mine.st==='acc'&&drv?`<div class="eta-detail" style="margin-top:4px">🚗 <b>${drv.name}</b> · ${drv.veh}</div>`:''}
+          ${mine.st==='pending'?'<div class="eta-detail" style="margin-top:4px;font-size:11px;color:#4b7a5a">Based on nearest available cab</div>':''}
+          </div></div>`:
+          `<div style="font-size:13px;color:#14532d;margin-bottom:8px"><b>Waiting at:</b> ${mine.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}${mine.st==='acc'&&drv?`<br>🚗 <b>${drv.name}</b> · ${drv.veh}`:''}</div>`}
+        ${seatBar(mine.passengers||[],ST.user.id)}
+        ${(mine.passengers||[]).length>1?`<div class="pax-list" style="margin-top:8px">${paxList(mine.passengers||[],ST.user.id)}</div>`:''}
+      </div>`;
+    } else {
+      // ── Request widget ──
+      const existing=ST.selLoc?ST.notifs.find(n=>n.st==='pending'&&n.loc===ST.selLoc&&(n.passengers||[]).length<MAX_SEATS):null;
+      const preETA=ST.selLoc?getBestETA(ST.selLoc):null;
+      rideWidget=`<div class="card">
+        <div class="ct">🚕 Request a Cab</div>
+        <div class="lpick">
+          <button class="lb2 ${ST.selLoc==='park'?'sel':''}" onclick="ST.selLoc='park';go()"><span class="li">🅿️</span><span class="ll">Parking Ground</span></button>
+          <button class="lb2 ${ST.selLoc==='off'?'sel':''}" onclick="ST.selLoc='off';go()"><span class="li">🏢</span><span class="ll">Office</span></button>
+        </div>
+        ${ST.selLoc&&preETA?`<div style="background:#f0fdf4;border:1px solid #d1fae5;border-radius:9px;padding:9px 12px;margin-bottom:10px;display:flex;align-items:center;gap:10px"><div style="font-size:22px;font-weight:900;color:#15803d">${preETA}</div><div style="font-size:12px;color:#4b7a5a">min estimated wait<br><span style="font-size:10px">Updates live as cabs move</span></div></div>`:''}
+        ${existing?`<div class="group-box">
+          <div style="font-weight:800;color:#14532d;font-size:13px;margin-bottom:8px">👥 Group already waiting — ${(existing.passengers||[]).length}/${MAX_SEATS} seats taken</div>
+          ${seatBar(existing.passengers||[],null)}
+          <div class="pax-list" style="margin-top:8px">${paxList(existing.passengers||[],null)}</div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn bp" style="flex:2" onclick="joinRide('${existing.id}')">🤝 Join this ride</button>
+            <button class="btn bgray" style="flex:1" onclick="createRide()">+ New</button>
+          </div>
+        </div>`:ST.selLoc?`<button class="btn bp" onclick="createRide()">🔔 Notify Driver</button>`:''}
+      </div>`;
+    }
+
+    return `<div style="margin-bottom:11px"><div class="mc"><div id="leaflet-map"></div></div></div>
+    ${rideWidget}
+    <div class="card"><div class="ct">🚗 Available Cabs (${onCabs.length})</div>
+      ${onCabs.length?onCabs.map(d=>{const e=getETA(d.id,ST.selLoc||'park');return`<div class="dc">
+        <div class="dav">🚗</div>
+        <div class="di"><div class="dn">${d.name}</div><div class="dv">${d.veh}</div></div>
+        <div style="text-align:right">${e?`<div style="font-size:16px;font-weight:900;color:#15803d">${e}</div><div style="font-size:10px;color:#4b7a5a">min away</div>`:''}
+        <span class="badge ${d.st==='available'?'bg2':'by'}" style="margin-top:3px">${d.st==='available'?'Free':'Busy'}</span></div>
+      </div>`;}).join(''):'<div class="es"><div class="ei">🚫</div><p>No cabs online right now</p></div>'}
+    </div>`;
   }
-  if(ST.tab==='hist'){const mine=ST.rides.filter(r=>r.passengers&&r.passengers.find(p=>p.uid===ST.user.id));return `<div class="card"><div class="ct">📋 My Rides (${mine.length})</div>${mine.length?mine.slice().reverse().map(r=>`<div class="nc ${r.loc==='park'?'park':'off2'}"><div><div class="nn">${r.loc==='park'?'🅿️ Parking → Office':'🏢 Office → Parking'}</div><div class="nd">Driver: ${r.dname} · ${r.time}</div><div class="nd">${r.passengers.length} passenger${r.passengers.length>1?'s':''}</div></div><span class="badge bg2">Done</span></div>`).join(''):'<div class="es"><div class="ei">🚖</div><p>No rides yet</p></div>'}</div>`;}
+
+  if(ST.tab==='hist'){
+    const mine=ST.rides.filter(r=>r.passengers&&r.passengers.find(p=>p.uid===ST.user.id));
+    return `<div class="card"><div class="ct">📋 My Rides (${mine.length})</div>
+      ${mine.length?mine.slice().reverse().map(r=>{
+        const pax=r.passengers||[];
+        const others=pax.filter(p=>p.uid!==ST.user.id);
+        return`<div class="ride-hist">
+          <div class="ride-hist-head">
+            <div>
+              <div style="font-weight:800;color:#14532d;font-size:13px">${r.loc==='park'?'🅿️ Parking → Office':'🏢 Office → Parking'}</div>
+              <div style="font-size:11px;color:#4b7a5a;margin-top:2px">🚗 ${r.dname} · 🕐 ${r.time}${r.auto?' · Auto-completed':''}</div>
+            </div>
+            <span class="badge bg2">👥 ${pax.length}</span>
+          </div>
+          <div class="ride-hist-body">
+            ${pax.map(p=>`<div class="ride-hist-pax"><div class="pax-av" style="width:24px;height:24px;font-size:10px">${p.uname.charAt(0)}</div><div style="flex:1"><b>${p.uname}</b>${p.uid===ST.user.id?' (You)':''}</div><div style="font-size:11px;color:#4b7a5a">${p.co}</div></div>`).join('')}
+          </div>
+        </div>`;
+      }).join(''):'<div class="es"><div class="ei">🚖</div><p>No rides yet</p></div>'}
+    </div>`;
+  }
   return '';
 }
 
 async function createRide(){if(!ST.selLoc)return;if(!ST.drivers.filter(d=>d.online&&d.st==='available').length)return alert('No available drivers. Try again soon.');const me={uid:ST.user.id,uname:ST.user.name,co:ST.user.co,mob:ST.user.mob};ST.notifs.push({id:uid(),loc:ST.selLoc,st:'pending',did:null,time:ts(),passengers:[me]});await sSet('gtgo_notifs',ST.notifs);ST.selLoc=null;go();}
-async function joinRide(notifId){const n=ST.notifs.find(x=>x.id===notifId);if(!n)return;if((n.passengers||[]).find(p=>p.uid===ST.user.id))return;if((n.passengers||[]).length>=MAX_SEATS)return alert('This ride is full');n.passengers.push({uid:ST.user.id,uname:ST.user.name,co:ST.user.co,mob:ST.user.mob});await sSet('gtgo_notifs',ST.notifs);ST.selLoc=null;go();}
-async function leaveRide(notifId){const n=ST.notifs.find(x=>x.id===notifId);if(!n)return;n.passengers=(n.passengers||[]).filter(p=>p.uid!==ST.user.id);if(!n.passengers.length)ST.notifs=ST.notifs.filter(x=>x.id!==notifId);await sSet('gtgo_notifs',ST.notifs);go();}
+async function joinRide(nid){const n=ST.notifs.find(x=>x.id===nid);if(!n)return;if((n.passengers||[]).find(p=>p.uid===ST.user.id))return;if((n.passengers||[]).length>=MAX_SEATS)return alert('Ride is full');n.passengers.push({uid:ST.user.id,uname:ST.user.name,co:ST.user.co,mob:ST.user.mob});await sSet('gtgo_notifs',ST.notifs);ST.selLoc=null;go();}
+async function leaveRide(nid){const n=ST.notifs.find(x=>x.id===nid);if(!n)return;n.passengers=(n.passengers||[]).filter(p=>p.uid!==ST.user.id);if(!n.passengers.length)ST.notifs=ST.notifs.filter(x=>x.id!==nid);await sSet('gtgo_notifs',ST.notifs);go();}
 
 // ── DRIVER TABS ───────────────────────────
 function rDriverTab(){
-  const me=ST.drivers.find(x=>x.id===ST.driver?.id)||ST.driver,pend=ST.notifs.filter(n=>n.st==='pending'),myAcc=ST.notifs.filter(n=>n.did===me?.id&&n.st==='acc');
-  if(ST.tab==='map'){return `<div class="card" style="padding:9px"><div class="mc"><div id="leaflet-map"></div></div></div>${myAcc.length?`<div class="ab aw">🚗 Active: pick up <b>${(myAcc[0].passengers||[]).length} passenger${(myAcc[0].passengers||[]).length>1?'s':''}</b> at ${myAcc[0].loc==='park'?'🅿️ Parking':'🏢 Office'}</div>`:''}<div class="card"><div class="ct">📍 Route</div><div style="display:flex;gap:10px;font-size:13px"><div style="flex:1;background:#fef3c7;padding:10px;border-radius:9px;text-align:center"><div style="font-size:20px">🅿️</div><div style="font-weight:700;font-size:12px">Parking</div></div><div style="display:flex;align-items:center;font-size:18px">↔️</div><div style="flex:1;background:#dcfce7;padding:10px;border-radius:9px;text-align:center"><div style="font-size:20px">🏢</div><div style="font-weight:700;font-size:12px">Office</div></div></div></div>`;}
-  if(ST.tab==='reqs'){return `${myAcc.length?`<div class="card"><div class="ct" style="color:#15803d">✅ Active Pickup</div>${myAcc.map(n=>{const pax=n.passengers||[];return`<div style="border:1.5px solid #86efac;border-radius:10px;padding:12px;margin-bottom:8px;background:#f0fdf4"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div><div style="font-weight:800;color:#14532d;font-size:13px">${n.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div><div style="font-size:11px;color:#4b7a5a">${n.time}</div></div><span class="badge bg2">👥 ${pax.length} passenger${pax.length>1?'s':''}</span></div><div class="passenger-list">${passengerList(pax,null)}</div><button class="btn bg bsm" style="margin-top:8px;width:100%" onclick="doneRide('${n.id}')">✓ Ride Complete</button></div>`;}).join('')}</div>`:''}
-    <div class="card"><div class="ct">🔔 Pending (${pend.length})</div>${pend.length?pend.map(n=>{const pax=n.passengers||[];return`<div style="border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;margin-bottom:8px"><div style="padding:10px 12px;display:flex;align-items:center;justify-content:space-between"><div><div style="font-weight:800;color:#14532d;font-size:13px">${n.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div><div style="font-size:11px;color:#4b7a5a">${n.time}</div></div><div style="display:flex;align-items:center;gap:8px"><span class="badge ${n.loc==='park'?'by':'bg2'}">👥 ${pax.length}/${MAX_SEATS}</span><div style="display:flex;gap:5px"><button class="btn bg bsm" onclick="accReq('${n.id}')">Accept</button><button class="btn br bsm" onclick="decReq('${n.id}')">Decline</button></div></div></div><div style="padding:0 12px 10px;background:#f8fafc">${passengerList(pax,null)}</div></div>`;}).join(''):'<div class="es"><div class="ei">🔕</div><p>No pending requests</p></div>'}</div>`;}
-  if(ST.tab==='stat'){const todT=ST.rides.filter(r=>r.did===me?.id).length;return `<div class="card"><div class="ct">⚙️ My Status</div><div class="dc" style="margin-bottom:0"><div class="dav">🚗</div><div class="di"><div class="dn">${me?.name}</div><div class="dv">${me?.veh} · ${MAX_SEATS}-passenger max</div></div><div style="display:flex;align-items:center;gap:8px"><span style="font-size:11px;color:var(--gr);font-weight:700">${me?.online?'Online':'Offline'}</span><label class="toggle"><input type="checkbox" ${me?.online?'checked':''} onchange="toggleDrv('${me?.id}')"><span class="ts"></span></label></div></div></div><div class="sg"><div class="sc"><div class="sv">${me?.trips||0}</div><div class="sl">Total Trips</div></div><div class="sc"><div class="sv">${todT}</div><div class="sl">Today's Trips</div></div></div><div class="card" style="background:${me?.online?'#f0fdf4':'#f8fafc'};border:1px solid ${me?.online?'#bbf7d0':'#e2e8f0'}"><span style="font-size:13px;color:${me?.online?'#14532d':'#64748b'}">${me?.online?'🟢 <b>Online</b> — GPS active, receiving requests':'🔴 <b>Offline</b>'}</span></div>`;}
+  const me=ST.drivers.find(x=>x.id===ST.driver?.id)||ST.driver;
+  const pend=ST.notifs.filter(n=>n.st==='pending'),myAcc=ST.notifs.filter(n=>n.did===me?.id&&n.st==='acc');
+  if(ST.tab==='map'){
+    return `<div style="margin-bottom:11px"><div class="mc"><div id="leaflet-map"></div></div></div>
+    ${myAcc.length?`<div class="eta-box"><div><div class="eta-num">${myAcc[0].eta||'—'}</div><div class="eta-label">min to dest</div></div><div><div class="eta-detail">🚗 ${myAcc[0].loc==='park'?'Drop at Office':'Drop at Parking'}</div><div class="eta-detail" style="margin-top:4px">👥 ${(myAcc[0].passengers||[]).length} passenger${(myAcc[0].passengers||[]).length>1?'s':''}</div><div class="eta-detail" style="font-size:11px;color:#4b7a5a;margin-top:2px">✅ Ride auto-completes when you arrive</div></div></div>`:''}
+    <div class="card"><div class="ct">📍 Route Info</div><div style="display:flex;gap:10px;font-size:13px">
+      <div style="flex:1;background:#fef3c7;padding:10px;border-radius:9px;text-align:center"><div style="font-size:20px">🅿️</div><div style="font-weight:700;font-size:12px">Parking</div><div style="font-size:10px;color:#4b7a5a">Smart City</div></div>
+      <div style="display:flex;align-items:center;font-size:18px">↔️</div>
+      <div style="flex:1;background:#dcfce7;padding:10px;border-radius:9px;text-align:center"><div style="font-size:20px">🏢</div><div style="font-weight:700;font-size:12px">Office</div><div style="font-size:10px;color:#4b7a5a">Greentouch</div></div>
+    </div></div>`;
+  }
+  if(ST.tab==='reqs'){
+    return `${myAcc.length?`<div class="card"><div class="ct" style="color:#15803d">✅ Active Pickup</div>
+      ${myAcc.map(n=>{const pax=n.passengers||[];return`<div style="border:1.5px solid #86efac;border-radius:11px;padding:12px;background:#f0fdf4">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <div><div style="font-weight:800;color:#14532d">${n.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div>
+          <div style="font-size:11px;color:#4b7a5a">${n.time} · ${pax.length} passenger${pax.length>1?'s':''}</div></div>
+          ${n.eta?`<div style="text-align:center;background:#fff;padding:8px 12px;border-radius:8px;border:1px solid #86efac"><div style="font-size:18px;font-weight:900;color:#15803d">${n.eta}</div><div style="font-size:10px;color:#4b7a5a">min left</div></div>`:''}
+        </div>
+        <div class="pax-list">${paxList(pax,null)}</div>
+        <button class="btn bg" style="margin-top:8px" onclick="doneRide('${n.id}')">✓ Complete Ride</button>
+        <div style="font-size:11px;color:#4b7a5a;text-align:center;margin-top:6px">Or ride auto-completes on arrival</div>
+      </div>`;}).join('')}</div>`:''}
+    <div class="card"><div class="ct">🔔 Pending (${pend.length})</div>
+      ${pend.length?pend.map(n=>{const pax=n.passengers||[],e=getETA(me?.id,n.loc);return`
+      <div style="border:1.5px solid #d1fae5;border-radius:11px;overflow:hidden;margin-bottom:8px">
+        <div style="padding:10px 12px;display:flex;align-items:center;justify-content:space-between">
+          <div><div style="font-weight:800;color:#14532d">${n.loc==='park'?'🅿️ Parking Ground':'🏢 Office'}</div>
+          <div style="font-size:11px;color:#4b7a5a">${n.time}</div></div>
+          <div style="display:flex;align-items:center;gap:8px">
+            ${e?`<div style="text-align:center"><div style="font-size:16px;font-weight:900;color:#15803d">${e}</div><div style="font-size:10px;color:#4b7a5a">min</div></div>`:''}
+            <span class="badge ${n.loc==='park'?'by':'bg2'}">👥 ${pax.length}/${MAX_SEATS}</span>
+          </div>
+        </div>
+        <div style="padding:0 12px 10px;background:#f8fafc">${paxList(pax,null)}</div>
+        <div style="padding:8px 12px;background:#f0fdf4;display:flex;gap:8px">
+          <button class="btn bg bsm" style="flex:1" onclick="accReq('${n.id}')">Accept</button>
+          <button class="btn br bsm" style="flex:1" onclick="decReq('${n.id}')">Decline</button>
+        </div>
+      </div>`;}).join(''):'<div class="es"><div class="ei">🔕</div><p>No pending requests</p></div>'}
+    </div>`;
+  }
+  if(ST.tab==='stat'){
+    const todT=ST.rides.filter(r=>r.did===me?.id).length;
+    return `<div class="card"><div class="ct">⚙️ My Status</div>
+      <div class="dc" style="margin-bottom:0"><div class="dav">🚗</div>
+        <div class="di"><div class="dn">${me?.name}</div><div class="dv">${me?.veh} · Max ${MAX_SEATS} passengers</div></div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:11px;color:var(--gr);font-weight:700">${me?.online?'Online':'Offline'}</span>
+          <label class="toggle"><input type="checkbox" ${me?.online?'checked':''} onchange="toggleDrv('${me?.id}')"><span class="ts"></span></label>
+        </div>
+      </div></div>
+    <div class="sg"><div class="sc"><div class="sv">${me?.trips||0}</div><div class="sl">Total Trips</div></div><div class="sc"><div class="sv">${todT}</div><div class="sl">Today's Trips</div></div></div>
+    <div class="card" style="background:${me?.online?'#f0fdf4':'#f8fafc'};border:1px solid ${me?.online?'#bbf7d0':'#e2e8f0'}">
+      <div style="font-size:13px;color:${me?.online?'#14532d':'#64748b'}">${me?.online?'🟢 Online · GPS tracking active<br><span style="font-size:11px">Ride auto-completes on arrival</span>':'🔴 Offline'}</div>
+    </div>`;
+  }
   return '';
 }
 
-async function accReq(id){const n=ST.notifs.find(x=>x.id===id);if(!n)return;if(ST.notifs.find(x=>x.did===ST.driver.id&&x.st==='acc')){alert('Finish current pickup first!');return;}n.st='acc';n.did=ST.driver.id;const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d){d.st='busy';ST.driver.st='busy';}await sSet('gtgo_notifs',ST.notifs);await sSet('gtgo_drvs',ST.drivers);go();}
+async function accReq(id){const n=ST.notifs.find(x=>x.id===id);if(!n)return;if(ST.notifs.find(x=>x.did===ST.driver.id&&x.st==='acc')){alert('Finish current pickup first!');return;}n.st='acc';n.did=ST.driver.id;const e=getETA(ST.driver.id,n.loc);if(e)n.eta=e;const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d){d.st='busy';ST.driver.st='busy';}await sSet('gtgo_notifs',ST.notifs);await sSet('gtgo_drvs',ST.drivers);go();}
 async function decReq(id){ST.notifs=ST.notifs.filter(n=>n.id!==id);await sSet('gtgo_notifs',ST.notifs);go();}
 async function doneRide(id){const n=ST.notifs.find(x=>x.id===id);if(!n)return;ST.rides.push({id:uid(),loc:n.loc,did:ST.driver.id,dname:ST.driver.name,time:ts(),passengers:n.passengers||[]});ST.notifs=ST.notifs.filter(x=>x.id!==id);const d=ST.drivers.find(x=>x.id===ST.driver.id);if(d){d.st='available';d.trips=(d.trips||0)+1;ST.driver.st='available';}await sSet('gtgo_notifs',ST.notifs);await sSet('gtgo_rides',ST.rides);await sSet('gtgo_drvs',ST.drivers);go();}
 async function toggleDrv(id){const d=ST.drivers.find(x=>x.id===id);if(!d)return;d.online=!d.online;d.st=d.online?'available':'offline';if(ST.driver?.id===id){ST.driver.online=d.online;ST.driver.st=d.st;}if(d.online)startTracking(id);else stopTracking(id);await sSet('gtgo_drvs',ST.drivers);go();}
@@ -504,144 +618,55 @@ async function toggleDrv(id){const d=ST.drivers.find(x=>x.id===id);if(!d)return;
 // ── ADMIN TABS ────────────────────────────
 function rAdminTab(){
   const pending=ST.users.filter(u=>u.status==='pending'),active=ST.users.filter(u=>u.status==='active'),pend=ST.notifs.filter(n=>n.st==='pending').length;
-  if(ST.tab==='dash'){const aR=ST.notifs.filter(n=>n.st!=='done'),totalW=aR.reduce((s,n)=>s+(n.passengers||[]).length,0);return `<div class="sg" style="grid-template-columns:repeat(4,1fr)"><div class="sc"><div class="sv">${active.length}</div><div class="sl">Users</div></div><div class="sc"><div class="sv">${ST.drivers.length}</div><div class="sl">Drivers</div></div><div class="sc"><div class="sv" style="color:#d97706">${totalW}</div><div class="sl">Waiting</div></div><div class="sc"><div class="sv">${ST.rides.length}</div><div class="sl">Rides</div></div></div>${pending.length?`<div class="ab aw">⚠️ <b>${pending.length} signup${pending.length>1?'s':''}</b> awaiting — <button class="link-btn" onclick="setTab('users')">Review →</button></div>`:''}<div class="card" style="padding:9px"><div class="ct">🗺️ Live Fleet Map</div><div class="mc"><div id="leaflet-map"></div></div></div>${aR.length?`<div class="card"><div class="ct">⚠️ Active Requests</div>${aR.map(n=>{const pax=n.passengers||[];return`<div class="nc ${n.loc==='park'?'park':'off2'}"><div style="flex:1"><div class="nn">${n.loc==='park'?'🅿️ Parking':'🏢 Office'} · ${n.time}</div><div class="nd">${pax.map(p=>p.uname).join(', ')}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="badge ${n.st==='acc'?'bg2':'by'}">${n.st==='acc'?'Accepted':'Pending'}</span><span class="badge bb">👥 ${pax.length}</span></div></div>`;}).join('')}</div>`:'`'}`;}
-
-  if(ST.tab==='users'){
-    return `${pending.length?`<div class="card" style="border:1.5px solid #fde68a;background:#fffbeb"><div class="ct" style="color:#b45309">⏳ Pending Approval (${pending.length})</div>
-      ${pending.map(u=>`<div class="pending-row"><div class="pending-main">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#d97706,#fbbf24);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">👤</div>
-        <div style="flex:1;min-width:0"><div style="font-weight:700;color:#92400e;font-size:13px">${u.name}</div>
-        <div style="font-size:11px;color:#b45309">ID: <b>${u.id}</b> · ${u.co}</div>
-        <div style="font-size:11px;color:#b45309">📱 ${u.mob}</div></div>
-        <div style="display:flex;gap:5px;flex-shrink:0">
-          <button class="btn bg bsm" onclick="approveUser('${u.id}')">✓ Approve</button>
-          <button class="btn br bsm" onclick="rejectUser('${u.id}')">✕ Reject</button>
-        </div>
-      </div></div>`).join('')}</div>`:''}
-    <div class="card"><div class="ct">➕ Add User <span class="lock-badge">🔒 Firebase Auth</span></div>
-      <div class="g2">
-        <div class="fg"><label>Login ID</label><input id="nu-id" placeholder="e.g. user03"></div>
-        <div class="fg"><label>Password</label><input id="nu-pwd" type="password" placeholder="Set initial password"></div>
-        <div class="fg"><label>Full Name</label><input id="nu-nm" placeholder="Staff full name"></div>
-        <div class="fg"><label>Mobile</label><input id="nu-mb" type="tel" placeholder="Mobile"></div>
-      </div>
-      <div class="fg"><label>Company</label><select id="nu-co"><option value="">Select company</option>${ST.companies.map(c=>`<option>${c}</option>`).join('')}</select></div>
-      <div class="hint-green" style="margin-bottom:10px">🔒 Password is stored securely in Firebase Auth — not visible in the database. To change a password, delete and re-add the user.</div>
-      <button class="btn bp" onclick="addUser()">➕ Add User</button>
-    </div>
-    <div class="card"><div class="ct">✅ Active Users (${active.length})</div>
-      ${active.length?active.map(u=>`<div class="acct-row">
-        <div class="acct-main">
-          <div class="acct-avatar">👤</div>
-          <div class="acct-info"><div class="acct-name">${u.name}</div><div class="acct-meta">ID: <b>${u.id}</b> · ${u.co}</div><div class="acct-meta">📱 ${u.mob}</div></div>
-          <div style="display:flex;gap:5px;flex-shrink:0">
-            <button class="btn bgray bsm" onclick="ST.editUId=ST.editUId==='${u.id}'?null:'${u.id}';go()">${ST.editUId===u.id?'✕':'✏️'}</button>
-            <button class="btn br bsm" onclick="delUser('${u.id}')">🗑️</button>
-          </div>
-        </div>
-        ${ST.editUId===u.id?`<div class="acct-edit">
-          <div class="g2" style="margin-bottom:8px">
-            <div class="fg" style="margin:0"><label>Mobile</label><input id="eu-mb" type="tel" value="${u.mob}"></div>
-            <div class="fg" style="margin:0"><label>Company</label><select id="eu-co">${ST.companies.map(c=>`<option ${c===u.co?'selected':''}>${c}</option>`).join('')}</select></div>
-          </div>
-          <div class="hint-green" style="margin-bottom:10px;font-size:11px">🔒 To reset password: delete this user and re-add, or use Firebase Console → Authentication</div>
-          <button class="btn bp bsm" onclick="saveEditU('${u.id}')">💾 Save</button>
-        </div>`:''}
-      </div>`).join(''):'<div class="es"><div class="ei">👤</div><p>No active users</p></div>'}
-    </div>`;
+  if(ST.tab==='dash'){
+    const aR=ST.notifs.filter(n=>n.st!=='done'),tw=aR.reduce((s,n)=>s+(n.passengers||[]).length,0);
+    return `<div class="sg" style="grid-template-columns:repeat(4,1fr)"><div class="sc"><div class="sv">${active.length}</div><div class="sl">Users</div></div><div class="sc"><div class="sv">${ST.drivers.length}</div><div class="sl">Drivers</div></div><div class="sc"><div class="sv" style="color:#d97706">${tw}</div><div class="sl">Waiting</div></div><div class="sc"><div class="sv">${ST.rides.length}</div><div class="sl">Rides</div></div></div>
+    ${pending.length?`<div class="ab aw">⚠️ <b>${pending.length} signup${pending.length>1?'s':''}</b> awaiting — <button class="link-btn" onclick="setTab('users')">Review →</button></div>`:''}
+    <div style="margin-bottom:11px"><div class="mc"><div id="leaflet-map"></div></div></div>
+    ${aR.length?`<div class="card"><div class="ct">⚠️ Active Requests</div>${aR.map(n=>{const pax=n.passengers||[];return`<div class="nc ${n.loc==='park'?'park':'off2'}"><div style="flex:1"><div class="nn">${n.loc==='park'?'🅿️ Parking':'🏢 Office'} · ${n.time}</div><div class="nd">${pax.map(p=>p.uname).join(', ')}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span class="badge ${n.st==='acc'?'bg2':'by'}">${n.st==='acc'?'Accepted':'Pending'}</span><span class="badge bb">👥 ${pax.length}</span>${n.eta?`<span style="font-size:11px;font-weight:800;color:#15803d">${n.eta}m ETA</span>`:''}</div></div>`;}).join('')}</div>`:''}`;
   }
-
-  if(ST.tab==='drvs'){
-    return `<div class="card"><div class="ct">➕ Add Driver <span class="lock-badge">🔒 Firebase Auth</span></div>
-      <div class="g2">
-        <div class="fg"><label>Login ID</label><input id="nd-id" placeholder="e.g. drv04"></div>
-        <div class="fg"><label>Password</label><input id="nd-pwd" type="password" placeholder="Set initial password"></div>
-        <div class="fg"><label>Driver Name</label><input id="nd-nm" placeholder="Full name"></div>
-        <div class="fg"><label>Vehicle No.</label><input id="nd-veh" placeholder="KL-XX-XX-XXXX"></div>
-      </div>
-      <button class="btn bp" onclick="addDrv()">➕ Add Driver</button>
-    </div>
-    <div class="card"><div class="ct">🚗 All Drivers (${ST.drivers.length})</div>
-      ${ST.drivers.length?ST.drivers.map(d=>`<div class="acct-row">
-        <div class="acct-main">
-          <div class="acct-avatar">🚗</div>
-          <div class="acct-info"><div class="acct-name">${d.name}</div><div class="acct-meta">ID: <b>${d.id}</b> · ${d.veh}</div>
-          <div class="acct-meta"><span class="badge ${d.online?'bg2':'br2'}" style="font-size:10px">${d.online?'Online':'Offline'}</span> · ${d.trips||0} trips</div></div>
-          <div style="display:flex;gap:5px;flex-shrink:0">
-            <button class="btn bgray bsm" onclick="ST.editDId=ST.editDId==='${d.id}'?null:'${d.id}';go()">${ST.editDId===d.id?'✕':'✏️'}</button>
-            <button class="btn br bsm" onclick="delDrv('${d.id}')">🗑️</button>
-          </div>
-        </div>
-        ${ST.editDId===d.id?`<div class="acct-edit">
-          <div class="fg" style="margin-bottom:10px"><label>Vehicle No.</label><input id="ed-veh" value="${d.veh}"></div>
-          <div class="hint-green" style="margin-bottom:10px;font-size:11px">🔒 To reset password: delete and re-add, or use Firebase Console → Authentication</div>
-          <button class="btn bp bsm" onclick="saveEditD('${d.id}')">💾 Save</button>
-        </div>`:''}
-      </div>`).join(''):'<div class="es"><div class="ei">🚗</div><p>No drivers yet</p></div>'}
-    </div>`;
-  }
-
+  if(ST.tab==='users'){return `${pending.length?`<div class="card" style="border:1.5px solid #fde68a;background:#fffbeb"><div class="ct" style="color:#b45309">⏳ Pending Approval (${pending.length})</div>${pending.map(u=>`<div class="pending-row"><div class="pending-main"><div style="width:36px;height:36px;background:linear-gradient(135deg,#d97706,#fbbf24);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">👤</div><div style="flex:1;min-width:0"><div style="font-weight:700;color:#92400e;font-size:13px">${u.name}</div><div style="font-size:11px;color:#b45309">ID: <b>${u.id}</b> · ${u.co}</div><div style="font-size:11px;color:#b45309">📱 ${u.mob}</div></div><div style="display:flex;gap:5px;flex-shrink:0"><button class="btn bg bsm" onclick="approveUser('${u.id}')">✓ Approve</button><button class="btn br bsm" onclick="rejectUser('${u.id}')">✕</button></div></div></div>`).join('')}</div>`:''}
+    <div class="card"><div class="ct">➕ Add User <span class="lock-badge">🔒 Firebase</span></div><div class="g2"><div class="fg"><label>Login ID</label><input id="nu-id" placeholder="e.g. user03"></div><div class="fg"><label>Password</label><input id="nu-pwd" type="password" placeholder="Initial password"></div><div class="fg"><label>Full Name</label><input id="nu-nm" placeholder="Staff full name"></div><div class="fg"><label>Mobile</label><input id="nu-mb" type="tel" placeholder="Mobile"></div></div><div class="fg"><label>Company</label><select id="nu-co"><option value="">Select company</option>${ST.companies.map(c=>`<option>${c}</option>`).join('')}</select></div><button class="btn bp" onclick="addUser()">➕ Add User</button></div>
+    <div class="card"><div class="ct">✅ Active Users (${active.length})</div>${active.length?active.map(u=>`<div class="acct-row"><div class="acct-main"><div class="acct-avatar">👤</div><div class="acct-info"><div class="acct-name">${u.name}</div><div class="acct-meta">ID: <b>${u.id}</b> · ${u.co}</div><div class="acct-meta">📱 ${u.mob}</div></div><div style="display:flex;gap:5px;flex-shrink:0"><button class="btn bgray bsm" onclick="ST.editUId=ST.editUId==='${u.id}'?null:'${u.id}';go()">${ST.editUId===u.id?'✕':'✏️'}</button><button class="btn br bsm" onclick="delUser('${u.id}')">🗑️</button></div></div>${ST.editUId===u.id?`<div class="acct-edit"><div class="g2" style="margin-bottom:8px"><div class="fg" style="margin:0"><label>Mobile</label><input id="eu-mb" type="tel" value="${u.mob}"></div><div class="fg" style="margin:0"><label>Company</label><select id="eu-co">${ST.companies.map(c=>`<option ${c===u.co?'selected':''}>${c}</option>`).join('')}</select></div></div><button class="btn bp bsm" onclick="saveEditU('${u.id}')">💾 Save</button></div>`:''}</div>`).join(''):'<div class="es"><div class="ei">👤</div><p>No active users</p></div>'}</div>`;}
+  if(ST.tab==='drvs'){return `<div class="card"><div class="ct">➕ Add Driver <span class="lock-badge">🔒 Firebase</span></div><div class="g2"><div class="fg"><label>Login ID</label><input id="nd-id" placeholder="e.g. drv04"></div><div class="fg"><label>Password</label><input id="nd-pwd" type="password" placeholder="Initial password"></div><div class="fg"><label>Driver Name</label><input id="nd-nm" placeholder="Full name"></div><div class="fg"><label>Vehicle No.</label><input id="nd-veh" placeholder="KL-XX-XX-XXXX"></div></div><button class="btn bp" onclick="addDrv()">➕ Add Driver</button></div>
+    <div class="card"><div class="ct">🚗 All Drivers (${ST.drivers.length})</div>${ST.drivers.length?ST.drivers.map(d=>`<div class="acct-row"><div class="acct-main"><div class="acct-avatar">🚗</div><div class="acct-info"><div class="acct-name">${d.name}</div><div class="acct-meta">ID: <b>${d.id}</b> · ${d.veh}</div><div class="acct-meta"><span class="badge ${d.online?'bg2':'br2'}" style="font-size:10px">${d.online?'Online':'Offline'}</span> · ${d.trips||0} trips</div></div><div style="display:flex;gap:5px;flex-shrink:0"><button class="btn bgray bsm" onclick="ST.editDId=ST.editDId==='${d.id}'?null:'${d.id}';go()">${ST.editDId===d.id?'✕':'✏️'}</button><button class="btn br bsm" onclick="delDrv('${d.id}')">🗑️</button></div></div>${ST.editDId===d.id?`<div class="acct-edit"><div class="fg" style="margin-bottom:10px"><label>Vehicle No.</label><input id="ed-veh" value="${d.veh}"></div><button class="btn bp bsm" onclick="saveEditD('${d.id}')">💾 Save</button></div>`:''}</div>`).join(''):'<div class="es"><div class="ei">🚗</div><p>No drivers yet</p></div>'}</div>`;}
   if(ST.tab==='cos'){return `<div class="card"><div class="ct">➕ Add Company</div><div style="display:flex;gap:9px"><input id="nco" placeholder="Company name" style="flex:1;padding:10px 12px;border:1.5px solid #d1fae5;border-radius:9px;font-size:14px;outline:none;color:#14532d"><button class="btn bp bsm" onclick="addCo()" style="white-space:nowrap">Add</button></div></div><div class="card"><div class="ct">🏢 Companies (${ST.companies.length})</div>${ST.companies.map((c,i)=>`<div class="ci"><span class="cn">🏢 ${c}</span><button class="btn br bsm" onclick="remCo(${i})">Remove</button></div>`).join('')}</div>`;}
-
-  if(ST.tab==='rides'){return `<div class="card"><div class="ct">📋 Ride History (${ST.rides.length})</div>${ST.rides.length?ST.rides.slice().reverse().map(r=>{const pax=r.passengers||[];return`<div style="border:1.5px solid #d1fae5;border-radius:10px;padding:11px 13px;margin-bottom:8px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px"><div><div style="font-weight:700;color:#14532d;font-size:13px">${r.loc==='park'?'🅿️ Parking → Office':'🏢 Office → Parking'}</div><div style="font-size:11px;color:#4b7a5a">Driver: ${r.dname} · ${r.time}</div></div><span class="badge bg2">👥 ${pax.length}</span></div><div style="font-size:12px;color:#4b7a5a">${pax.map(p=>`${p.uname} (${p.co})`).join(' · ')}</div></div>`;}).join(''):'<div class="es"><div class="ei">📋</div><p>No rides yet</p></div>'}</div>`;}
+  if(ST.tab==='rides'){
+    return `<div class="card"><div class="ct">📋 Ride History (${ST.rides.length})</div>
+      ${ST.rides.length?ST.rides.slice().reverse().map(r=>{const pax=r.passengers||[];return`
+      <div class="ride-hist">
+        <div class="ride-hist-head">
+          <div>
+            <div style="font-weight:800;color:#14532d;font-size:13px">${r.loc==='park'?'🅿️ Parking → Office':'🏢 Office → Parking'}</div>
+            <div style="font-size:11px;color:#4b7a5a;margin-top:2px">🚗 ${r.dname} · 🕐 ${r.time}${r.auto?' · Auto':''}
+          </div>
+          </div>
+          <span class="badge bg2">👥 ${pax.length}</span>
+        </div>
+        <div class="ride-hist-body">
+          ${pax.map(p=>`<div class="ride-hist-pax"><div class="pax-av" style="width:26px;height:26px;font-size:11px">${p.uname.charAt(0)}</div><div style="flex:1;font-weight:600">${p.uname}</div><div style="font-size:11px;color:#4b7a5a">${p.co}</div></div>`).join('')}
+        </div>
+      </div>`;}).join(''):'<div class="es"><div class="ei">📋</div><p>No rides yet</p></div>'}
+    </div>`;
+  }
   return '';
 }
 
 // ── ADMIN ACTIONS ─────────────────────────
-// Approve: Firebase Auth account already created during signup — just activate in DB
 async function approveUser(uid){const u=ST.users.find(x=>x.id===uid);if(u)u.status='active';await sSet('gtgo_users',ST.users);go();}
 async function rejectUser(uid){ST.users=ST.users.filter(x=>x.id!==uid);await sSet('gtgo_users',ST.users);go();}
-
-// Admin creates user — uses secondary auth app so admin stays logged in
-async function addUser(){
-  const id=v('nu-id'),pwd=v('nu-pwd'),nm=v('nu-nm'),mb=v('nu-mb'),co=v('nu-co');
-  if(!id||!pwd||!nm||!mb||!co)return alert('Fill all fields');
-  if(ST.users.find(u=>u.id===id))return alert('Login ID already exists');
-  try{
-    await createUserWithEmailAndPassword(_auth2,FB_EMAIL(id),pwd);
-    await signOut(_auth2); // sign out secondary immediately
-  }catch(e){
-    if(e.code==='auth/email-already-in-use')return alert('This Login ID is already registered in Firebase Auth');
-    return alert('Firebase Auth error: '+e.message);
-  }
-  ST.users.push({id,name:nm,co,mob:mb,status:'active'}); // NO password in DB!
-  await sSet('gtgo_users',ST.users);go();
-}
-
+async function addUser(){const id=v('nu-id'),pwd=v('nu-pwd'),nm=v('nu-nm'),mb=v('nu-mb'),co=v('nu-co');if(!id||!pwd||!nm||!mb||!co)return alert('Fill all fields');if(ST.users.find(u=>u.id===id))return alert('Login ID exists');try{await createUserWithEmailAndPassword(_auth2,FB_EMAIL(id),pwd);await signOut(_auth2);}catch(e){if(e.code==='auth/email-already-in-use')return alert('Login ID already registered');return alert('Firebase error: '+e.message);}ST.users.push({id,name:nm,co,mob:mb,status:'active'});await sSet('gtgo_users',ST.users);go();}
 async function saveEditU(uid){const u=ST.users.find(x=>x.id===uid);if(!u)return;const mb=v('eu-mb'),co=v('eu-co');if(mb)u.mob=mb;if(co)u.co=co;ST.editUId=null;await sSet('gtgo_users',ST.users);go();}
 async function delUser(uid){ST.users=ST.users.filter(u=>u.id!==uid);await sSet('gtgo_users',ST.users);go();}
-
-async function addDrv(){
-  const id=v('nd-id'),pwd=v('nd-pwd'),nm=v('nd-nm'),veh=v('nd-veh');
-  if(!id||!pwd||!nm||!veh)return alert('Fill all fields');
-  if(ST.drivers.find(d=>d.id===id))return alert('Login ID already exists');
-  try{
-    await createUserWithEmailAndPassword(_auth2,FB_EMAIL(id),pwd);
-    await signOut(_auth2);
-  }catch(e){
-    if(e.code==='auth/email-already-in-use')return alert('This Login ID is already registered in Firebase Auth');
-    return alert('Firebase Auth error: '+e.message);
-  }
-  ST.drivers.push({id,name:nm,veh,online:false,st:'offline',lat:10.005+Math.random()*.01,lng:76.363+Math.random()*.01,trips:0});
-  await sSet('gtgo_drvs',ST.drivers);go();
-}
-
+async function addDrv(){const id=v('nd-id'),pwd=v('nd-pwd'),nm=v('nd-nm'),veh=v('nd-veh');if(!id||!pwd||!nm||!veh)return alert('Fill all fields');if(ST.drivers.find(d=>d.id===id))return alert('Login ID exists');try{await createUserWithEmailAndPassword(_auth2,FB_EMAIL(id),pwd);await signOut(_auth2);}catch(e){if(e.code==='auth/email-already-in-use')return alert('Login ID already registered');return alert('Firebase error: '+e.message);}ST.drivers.push({id,name:nm,veh,online:false,st:'offline',lat:10.005+Math.random()*.01,lng:76.363+Math.random()*.01,trips:0});await sSet('gtgo_drvs',ST.drivers);go();}
 async function saveEditD(did){const d=ST.drivers.find(x=>x.id===did);if(!d)return;const veh=v('ed-veh');if(veh)d.veh=veh;ST.editDId=null;await sSet('gtgo_drvs',ST.drivers);go();}
 async function delDrv(did){ST.drivers=ST.drivers.filter(d=>d.id!==did);await sSet('gtgo_drvs',ST.drivers);go();}
-async function addCo(){const val=(document.getElementById('nco')?.value||'').trim();if(!val)return alert('Enter a company name');if(ST.companies.includes(val))return alert('Already exists');ST.companies.push(val);await sSet('gtgo_cos',ST.companies);go();}
+async function addCo(){const val=(document.getElementById('nco')?.value||'').trim();if(!val)return alert('Enter company name');if(ST.companies.includes(val))return alert('Already exists');ST.companies.push(val);await sSet('gtgo_cos',ST.companies);go();}
 async function remCo(i){ST.companies.splice(i,1);await sSet('gtgo_cos',ST.companies);go();}
 
 function hdr(title,sub){return `<div class="ah"><div class="ah-l"><div class="ah-logo">🌿</div><div><div class="at">Greentouch <span>Go</span></div><div style="font-size:10px;color:rgba(255,255,255,.6);margin-top:1px">${title}${sub?' · '+sub:''}</div></div></div><button class="lbtn" onclick="logout()">Logout</button></div>`;}
 
-Object.assign(window,{
-  ST,go,setTab,logout,doLogin,goSignup,signupStep1,signupStep2,
-  createRide,joinRide,leaveRide,
-  accReq,decReq,doneRide,toggleDrv,
-  approveUser,rejectUser,addUser,saveEditU,delUser,
-  addDrv,saveEditD,delDrv,addCo,remCo,
-  doInstall,dismissInstall
-});
-
+Object.assign(window,{ST,go,setTab,logout,doLogin,goSignup,signupStep1,signupStep2,createRide,joinRide,leaveRide,accReq,decReq,doneRide,toggleDrv,approveUser,rejectUser,addUser,saveEditU,delUser,addDrv,saveEditD,delDrv,addCo,remCo,doInstall,dismissInstall});
 init();
 </script>
 </body>
